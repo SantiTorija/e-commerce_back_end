@@ -18,12 +18,6 @@ const userSchema = new Schema({
     required: "Last name is required",
     trim: true,
   },
-  username: {
-    type: String,
-    required: "Username is required",
-    trim: true,
-    unique: true,
-  },
   password: {
     type: String,
     required: "Password is required",
@@ -39,21 +33,20 @@ const userSchema = new Schema({
     required: "Email address is required",
     validate: [validateEmail, "Please fill a valid email address"],
   },
-  bio: {
-    type: String,
-    trim: true,
-  },
   avatar: {
     type: String,
     trim: true,
   },
-  banner: {
+  adress: {
     type: String,
     trim: true,
   },
-  tweets: [{ type: Schema.Types.ObjectId, ref: "Tweet" }],
-  followers: [{ type: Schema.Types.ObjectId, ref: "User" }],
-  following: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  phone: {
+    type: String,
+    trim: true,
+  },
+  orders: [{ type: Schema.Types.ObjectId, ref: "Order" }],
+  rol: Number,
 });
 
 userSchema.pre("save", async function (next) {

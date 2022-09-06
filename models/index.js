@@ -3,9 +3,13 @@ const mongoose = require("mongoose");
 mongoose.connect(process.env.DB_CONNECTION);
 
 const User = require("./User");
-const Tweet = require("./Tweet");
+const Wine = require("./Wine");
+const Order = require("./Order");
+const Variety = require("./Variety");
 
 module.exports = {
   User,
-  Tweet,
+  Wine,
+  Order,
+  Variety,
 };
