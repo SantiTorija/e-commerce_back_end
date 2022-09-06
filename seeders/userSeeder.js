@@ -1,4 +1,4 @@
-const { faker } = require("@faker-js/faker");
+/* const { faker } = require("@faker-js/faker");
 const { User } = require("../models");
 const bcrypt = require("bcryptjs");
 const axios = require("axios");
@@ -71,3 +71,4 @@ module.exports = async () => {
   }
   console.log("[Database] Se corrió el seeder de User.");
 };
+ */
