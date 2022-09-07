@@ -27,6 +27,7 @@
     "mongoose": "^6.5.2",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+    "slugify": "^1.6.5",
     "sweetalert2": "^11.4.26"
   },
   "description": "Hack Academy - Ejemplo de MVC y Sequelize",
