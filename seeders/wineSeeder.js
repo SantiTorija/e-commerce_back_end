@@ -1,4 +1,5 @@
 const { Wine } = require("../models");
+const slugify = require("slugify");
 
 module.exports = async () => {
   for (let i = 0; i < 11; i++) {
@@ -19,7 +20,12 @@ module.exports = async () => {
       price: 40,
       stock: 10,
       highlighted: true,
-      slug: "19-CRIMES-CABERNET-SAUVIGNON",
+      slug: slugify("19 CRIMES CABERNET SAUVIGNON", {
+        replacement: "-",
+        remove: undefined,
+        lower: true,
+        remove: /[.]/g,
+      }),
     });
     wine.save();
   }

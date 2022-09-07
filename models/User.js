@@ -2,11 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const bcrypt = require("bcryptjs");
 
-function validateEmail(email) {
-  const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  return re.test(email);
-}
-
 const userSchema = new Schema({
   firstname: {
     type: String,
@@ -31,13 +26,12 @@ const userSchema = new Schema({
     lowercase: true,
     unique: true,
     required: "Email address is required",
-    validate: [validateEmail, "Please fill a valid email address"],
   },
   avatar: {
     type: String,
     trim: true,
   },
-  adress: {
+  address: {
     type: String,
     trim: true,
   },
@@ -53,9 +47,10 @@ userSchema.pre("save", async function (next) {
   return next();
 });
 
-userSchema.methods.isValidPassword = async function (password) {
-  const user = await User.findOne({ username: this.username }).select("password");
+userSchema.methods.isValidPassword = async function (password, email) {
+  const user = await User.findOne({ email: email }).select("password");
   const valid = await bcrypt.compare(password, user.password);
+  console.log(password, user.password);
   return valid;
 };
 

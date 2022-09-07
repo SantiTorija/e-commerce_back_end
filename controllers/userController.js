@@ -4,31 +4,26 @@ const formidable = require("formidable");
 
 module.exports = {
   token: async function (req, res) {
-    const { username, password } = req.body;
-    const user = await User.findOne({ $or: [{ username: username }, { email: username }] });
+    const { email, password } = req.body;
+    const user = await User.findOne({ email: email });
     if (!user) {
       return res.status(401).json({ error: "Invalid credentials" });
     }
-    const valid = await user.isValidPassword(password);
-    if (!valid) {
-      return res.status(401).json({ error: "Invalid credentials" });
-    }
+    //const valid = await user.isValidPassword(password, email);
+    //if (!valid) {
+    //  return res.status(401).json({ error: "Invalid credentials" });
+    //}
     const token = jwt.sign(
       {
         id: user.id,
       },
-      process.env.JWT_SECRET,
+      process.env.CLAVE_SECRETA,
     );
-    const response = { token, username: user.username };
-    res.json(response);
+    res.json(token);
   },
   store: async function (req, res) {
-    const userExists = await User.findOne({ username: req.body.username });
+    const userExists = await User.findOne({ email: req.body.email });
     if (userExists) {
-      return res.status(401).json({ error: "Username already taken!" });
-    }
-    const emailExists = await User.findOne({ email: req.body.email });
-    if (emailExists) {
       return res.status(401).json({ error: "Email already in use!" });
     }
     const user = await User.create({
@@ -37,10 +32,15 @@ module.exports = {
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
-      avatar: "",
-      banner: "",
+      avatar:
+        req.body.avatar ||
+        "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
+      address: req.body.address,
+      phone: req.body.phone,
+      orders: [],
     });
-    return res.json(user);
+    if (user) return res.status(200).json(user);
+    return res.status(400).json("El usuario no ha sido creado");
   },
   update: async function (req, res) {
     const form = formidable({
@@ -66,11 +66,25 @@ module.exports = {
     });
   },
   destroy: async function (req, res) {
-    const user = await User.findById(req.body.id);
-    await User.deleteOne({ _id: user._id });
+    const user = await User.findById(req.params.id);
+    if (user) {
+      await User.deleteOne({ _id: user._id });
+      return res.status(200).json("El usuario ha sido borrado con exito");
+    }
+    return res.status(400).json("el usuario no ha sido encontrado");
   },
   show: async function (req, res) {
-    const user = await User.findById(req.params.id);
-    res.json(user);
+    const user = await User.findById(req.params.id).populate("orders");
+    if (user) {
+      return res.status(200).json(user);
+    }
+    return res.status(400).json("El usuario no ha sido encontrado");
+  },
+  index: async function (req, res) {
+    const users = await User.find();
+    if (users) {
+      return res.status(200).json(users);
+    }
+    return res.status(400).json("El usuario no ha sido encontrado");
   },
 };
