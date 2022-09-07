@@ -112,7 +112,7 @@ module.exports = async () => {
     name: "ANTIGUA BODEGA PRIMA DONNA SAUVIGNON BLANC",
     picture:
       "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/ant-bodega-stagnari-prima-donna-sauvignon-blanc-antigua-mariana-meneguzzi-vino-blanco-vinos-del-mundo_983_2000x.jpg",
-    type: "Sauvignon Blanc",
+    type: "Tinto",
     country: "Uruguay",
     region: "Canelones",
     harvest: "2015",
@@ -153,7 +153,7 @@ module.exports = async () => {
   const wine7 = await Wine.create({
     name: "LOS VASCOS ROSE",
     picture: "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/losvascos_rose_2000x.jpg",
-    type: "Cabernet Sauvignon",
+    type: "Vino Tinto",
     country: "Chile",
     region: "Colchagua",
     harvest: "2019",
