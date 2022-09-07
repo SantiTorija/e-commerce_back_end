@@ -3,7 +3,7 @@ const wineRoutes = express.Router();
 const wineController = require("../controllers/wineController");
 
 wineRoutes.get("/", wineController.index);
-wineRoutes.get("/:id", wineController.show);
+wineRoutes.get("/:slug", wineController.show);
 wineRoutes.post("/", wineController.store);
 wineRoutes.patch("/:id", wineController.update);
 wineRoutes.delete("/:id", wineController.destroy);

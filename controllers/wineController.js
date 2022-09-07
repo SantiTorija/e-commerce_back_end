@@ -2,7 +2,7 @@ const { Wine } = require("../models");
 
 module.exports = {
   index: async function (req, res) {
-    const wines = await Wine.find();
+    const wines = await Wine.find().populate("variety");
     res.json(wines);
   },
   store: async function (req, res) {
@@ -38,11 +38,11 @@ module.exports = {
     return res.status(400).json("El vino no ha sido encontrado");
   },
   show: async function (req, res) {
-    const wine = await Wine.findById(req.params.id).populate("variety");
+    const wine = await Wine.findOne({ slug: req.params.slug }).populate("variety");
     if (wine) {
       return res.json(wine);
     }
-    return res.status(400);
+    return res.status(400).json("el vino no se encuentra");
   },
   update: async function (req, res) {
     const wine = await Wine.findById(req.params.id);
