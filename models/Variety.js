@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const varietySchema = new Schema({
-  name: String,
-  code: String,
+  name: { type: String },
+  code: { type: String },
 });
 
 const Variety = mongoose.model("Variety", varietySchema);
