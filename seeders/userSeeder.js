@@ -1,73 +1,36 @@
-const { faker } = require("@faker-js/faker");
 const { User } = require("../models");
-const bcrypt = require("bcryptjs");
-const axios = require("axios");
-const path = require("path");
-const fs = require("fs");
-
-faker.locale = "en";
 
 module.exports = async () => {
-  const users = [];
+  const user = await User.create({
+    firstname: "Carlos",
+    lastname: "Perez",
+    password: "password",
+    email: "carlosperez@gmail.com",
+    avatar: "https://i.postimg.cc/gjWvx26P/avataaars.png",
+    adress: "Avenida Rivera 5403",
+    phone: "09837428",
+  });
+  user.save();
 
-  for (let i = 0; i < 100; i++) {
-    const firstname = faker.name.firstName();
-    const lastname = faker.name.lastName();
-    users.push({
-      firstname: firstname,
-      lastname: lastname,
-      username: faker.internet.userName(firstname, lastname),
-      password: "password",
-      email: faker.internet.email(firstname, lastname),
-      bio: faker.lorem.paragraph(),
-      avatar: "",
-      banner: "",
-      tweets: [],
-      followers: [],
-      following: [],
-    });
-  }
+  const user2 = await User.create({
+    firstname: "Carla",
+    lastname: "Sarasa",
+    password: "password",
+    email: "carlasarasa@gmail.com",
+    avatar: "https://i.postimg.cc/MHSFzx6n/avataaars-1.png",
+    adress: "Avenida Italia 4324",
+    phone: "0954395",
+  });
+  user2.save();
 
-  for (const user of users) {
-    // Avatar
-    const imagePath = path.join(__dirname, "../public/img/", `${user.username}.jpg`);
-    const url = faker.image.avatar(500, 500);
-    axios({
-      method: "get",
-      url: url,
-      responseType: "stream",
-    }).then((response) => {
-      response.data.pipe(fs.createWriteStream(imagePath));
-    });
-    user.avatar = `${user.username}.jpg`;
-
-    // Banner
-    const imagePathBanner = path.join(__dirname, "../public/img/", `banner_${user.username}.jpg`);
-    const urlBanner = faker.image.image(1500, 500);
-    axios({
-      method: "get",
-      url: urlBanner,
-      responseType: "stream",
-    }).then((response) => {
-      response.data.pipe(fs.createWriteStream(imagePathBanner));
-    });
-    user.banner = `banner_${user.username}.jpg`;
-  }
-
-  const createdUsers = await User.insertMany(users);
-  for (let [index, user] of createdUsers.entries()) {
-    const numeroDeFollowers = Math.floor(Math.random() * createdUsers.length);
-    const listaAgregados = [index];
-    for (let i = 0; i < numeroDeFollowers; i++) {
-      const indexUser = Math.floor(Math.random() * createdUsers.length);
-      if (listaAgregados.includes(indexUser)) {
-        continue;
-      }
-      listaAgregados.push(indexUser);
-      await user.updateOne({ $push: { followers: createdUsers[indexUser] } });
-      await createdUsers[indexUser].updateOne({ $push: { following: user } });
-    }
-    user.save();
-  }
-  console.log("[Database] Se corrió el seeder de User.");
+  const user3 = await User.create({
+    firstname: "Marcelo",
+    lastname: "Zalayeta",
+    password: "password",
+    email: "marcelodanubio1891@gmail.com",
+    avatar: "https://i.postimg.cc/sDkdLFSZ/avataaars-2.png",
+    adress: "Bulevar Artigas 5435",
+    phone: "094353",
+  });
+  user3.save();
 };

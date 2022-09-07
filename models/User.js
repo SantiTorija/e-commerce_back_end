@@ -46,7 +46,6 @@ const userSchema = new Schema({
     trim: true,
   },
   orders: [{ type: Schema.Types.ObjectId, ref: "Order" }],
-  rol: Number,
 });
 
 userSchema.pre("save", async function (next) {
