@@ -32,8 +32,7 @@ module.exports = async () => {
 
   const wine = await Wine.create({
     name: "19 CRIMES CABERNET SAUVIGNON",
-    picture:
-      "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/19Crimes-CabSauv-VDM_2000x.jpg",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-astoria-017.png",
     type: "Tinto",
     country: "Australia",
     region: "South Eastern Australia",
@@ -53,8 +52,7 @@ module.exports = async () => {
 
   const wine2 = await Wine.create({
     name: "AMIRAL DE BEYCHEVELLE",
-    picture:
-      "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/AmiralDeBeychevelle-VDM_2000x.jpg",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-mouton-cadet-rouge.png",
     type: "Tinto",
     country: "Francia",
     region: "St. Julien",
@@ -74,8 +72,7 @@ module.exports = async () => {
 
   const wine3 = await Wine.create({
     name: "PENFOLDS GRANGE",
-    picture:
-      "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/penfolds-grange-australia-blend-peter-gago-south-vino-tinto-vinos-del-mundo_669_2000x.jpg",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-domaine-barondarques.png",
     type: "Tinto",
     country: "Austalia",
     region: "South Australia",
@@ -95,8 +92,7 @@ module.exports = async () => {
 
   const wine4 = await Wine.create({
     name: "MONTES CHERUB ROSE",
-    picture:
-      "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/montes-cherub-rose-aurelio-casablanca-chile-syrah-vino-vinos-del-mundo_204_2000x.jpg",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-dreamline-rose.png",
     type: "Rose",
     country: "Chile",
     region: "Casablanca",
@@ -116,8 +112,7 @@ module.exports = async () => {
 
   const wine5 = await Wine.create({
     name: "ANTIGUA BODEGA PRIMA DONNA SAUVIGNON BLANC",
-    picture:
-      "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/ant-bodega-stagnari-prima-donna-sauvignon-blanc-antigua-mariana-meneguzzi-vino-blanco-vinos-del-mundo_983_2000x.jpg",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-mapu-reserva-cabernet.png",
     type: "Tinto",
     country: "Uruguay",
     region: "Canelones",
@@ -137,8 +132,7 @@ module.exports = async () => {
 
   const wine6 = await Wine.create({
     name: "FAMILIA DEICAS LICOR DE TANNAT",
-    picture:
-      "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/licor-de-tannat-canelones-familia-deicas-santiago-uruguay-vino-licoroso-vinos-del-mundo_856_2000x.jpg",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-montecastrillo.png",
     type: "Vino Licoroso",
     country: "Uruguay",
     region: "Canelones",
@@ -157,8 +151,8 @@ module.exports = async () => {
   wine6.save();
 
   const wine7 = await Wine.create({
-    name: "LOS VASCOS ROSE",
-    picture: "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/losvascos_rose_2000x.jpg",
+    name: "LOS VASCOS",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-cabernet-paysdoc.png",
     type: "Vino Tinto",
     country: "Chile",
     region: "Colchagua",
@@ -178,8 +172,7 @@ module.exports = async () => {
 
   const wine8 = await Wine.create({
     name: "ANTIGUA BODEGA DEL PEDREGAL TANNAT",
-    picture:
-      "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/ant-bodega-stagnari-del-pedregal-tannat-antigua-mariana-meneguzzi-vino-tinto-vinos-mundo_574_2000x.jpg",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-reserve-bourgogne.png",
     type: "Tinto",
     country: "Uruguay",
     region: "Canelones",
@@ -198,8 +191,7 @@ module.exports = async () => {
 
   const wine9 = await Wine.create({
     name: "ANTIGUA BODEGA OSIRIS MERLOT",
-    picture:
-      "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/ant-bodega-stagnari-osiris-merlot-antigua-mariana-meneguzzi-vino-tinto-vinos-del-mundo_666_2000x.jpg",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-syrah-paysdoc.png",
     type: "Tinto",
     country: "Uruguay",
     region: "Canelones",
