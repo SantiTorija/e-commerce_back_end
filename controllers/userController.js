@@ -38,6 +38,7 @@ module.exports = {
       address: req.body.address,
       phone: req.body.phone,
       orders: [],
+      cartList: req.body.cartList
     });
     if (user) return res.status(200).json(user);
     return res.status(400).json("El usuario no ha sido creado");
@@ -74,7 +75,7 @@ module.exports = {
     return res.status(400).json("el usuario no ha sido encontrado");
   },
   show: async function (req, res) {
-    const user = await User.findById(req.params.id).populate("orders");
+    const user = await User.findById(req.params.id).populate("orders").populate("cartList");
     if (user) {
       return res.status(200).json(user);
     }

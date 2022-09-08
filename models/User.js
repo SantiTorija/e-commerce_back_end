@@ -40,6 +40,7 @@ const userSchema = new Schema({
     trim: true,
   },
   orders: [{ type: Schema.Types.ObjectId, ref: "Order" }],
+  cartList: [{ type: Schema.Types.ObjectId, ref: "Wine", quantity: Number }]
 });
 
 userSchema.pre("save", async function (next) {
