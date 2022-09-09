@@ -7,5 +7,6 @@ wineRoutes.get("/:slug", wineController.show);
 wineRoutes.post("/", wineController.store);
 wineRoutes.patch("/:id", wineController.update);
 wineRoutes.delete("/:id", wineController.destroy);
+wineRoutes.get("/filter/:type", wineController.showType);
 
 module.exports = wineRoutes;

@@ -33,7 +33,7 @@ module.exports = async () => {
   const wine = await Wine.create({
     name: "19 CRIMES CABERNET SAUVIGNON",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-astoria-017.png",
-    type: "Tinto",
+    type: "tinto",
     country: "Australia",
     region: "South Eastern Australia",
     harvest: "2018",
@@ -53,7 +53,7 @@ module.exports = async () => {
   const wine2 = await Wine.create({
     name: "AMIRAL DE BEYCHEVELLE",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-mouton-cadet-rouge.png",
-    type: "Tinto",
+    type: "tinto",
     country: "Francia",
     region: "St. Julien",
     harvest: "2019",
@@ -73,7 +73,7 @@ module.exports = async () => {
   const wine3 = await Wine.create({
     name: "PENFOLDS GRANGE",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-domaine-barondarques.png",
-    type: "Tinto",
+    type: "tinto",
     country: "Austalia",
     region: "South Australia",
     harvest: "2015",
@@ -93,7 +93,7 @@ module.exports = async () => {
   const wine4 = await Wine.create({
     name: "MONTES CHERUB ROSE",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-dreamline-rose.png",
-    type: "Rose",
+    type: "rose",
     country: "Chile",
     region: "Casablanca",
     harvest: "2016",
@@ -113,7 +113,7 @@ module.exports = async () => {
   const wine5 = await Wine.create({
     name: "ANTIGUA BODEGA PRIMA DONNA SAUVIGNON BLANC",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-mapu-reserva-cabernet.png",
-    type: "Tinto",
+    type: "tinto",
     country: "Uruguay",
     region: "Canelones",
     harvest: "2015",
@@ -133,7 +133,7 @@ module.exports = async () => {
   const wine6 = await Wine.create({
     name: "FAMILIA DEICAS LICOR DE TANNAT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-montecastrillo.png",
-    type: "Vino Licoroso",
+    type: "licoroso",
     country: "Uruguay",
     region: "Canelones",
     harvest: "2015",
@@ -153,7 +153,7 @@ module.exports = async () => {
   const wine7 = await Wine.create({
     name: "LOS VASCOS",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-cabernet-paysdoc.png",
-    type: "Vino Tinto",
+    type: "tinto",
     country: "Chile",
     region: "Colchagua",
     harvest: "2019",
@@ -173,7 +173,7 @@ module.exports = async () => {
   const wine8 = await Wine.create({
     name: "ANTIGUA BODEGA DEL PEDREGAL TANNAT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-reserve-bourgogne.png",
-    type: "Tinto",
+    type: "tinto",
     country: "Uruguay",
     region: "Canelones",
     harvest: "2015",
@@ -192,7 +192,7 @@ module.exports = async () => {
   const wine9 = await Wine.create({
     name: "ANTIGUA BODEGA OSIRIS MERLOT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-syrah-paysdoc.png",
-    type: "Tinto",
+    type: "tinto",
     country: "Uruguay",
     region: "Canelones",
     harvest: "2011",

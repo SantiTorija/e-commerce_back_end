@@ -74,4 +74,15 @@ module.exports = {
     }
     return res.status(400).json("el vino no ha sido encontrado");
   },
+  showType: async function (req, res) {
+    const tipo = req.params.type.toLowerCase();
+    if (tipo === "todos") {
+      const allWines = await Wine.find();
+      if (allWines) return res.json(allWines);
+      return res.status(400).json("el vino no ha sido encontrado");
+    }
+    const wines = await Wine.find({ "type": tipo });
+    if (wines) return res.json(wines);
+    return res.status(400).json("el vino no ha sido encontrado");
+  }
 };
