@@ -106,7 +106,7 @@ module.exports = async () => {
     price: 49,
     stock: 10,
     highlighted: true,
-    slug: "PENFOLDS-GRANGE",
+    slug: "MONTES-CHERUB-ROSE",
   });
   wine4.save();
 
@@ -208,4 +208,116 @@ module.exports = async () => {
     slug: "ANTIGUA-BODEGA-OSIRIS-MERLOT",
   });
   wine9.save();
+  const wine10 = await Wine.create({
+    name: "ALMA NEGRA ESPUMANTE BRUT NATURE ROSE",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-astoria-sushi.png",
+    type: "espumante",
+    country: "Argentina",
+    region: "Mendoza",
+    harvest: "2015",
+    cellar: "Alma negra",
+    capacity: "750 ml",
+    tasting:
+      "Intenso color Rosa. Muestra aromas de cereza, moras y ciruelas con notas de café, chocolate y vainilla.",
+    description:
+      "En nariz intensidad aromática, frutal y con notas a tostados. En boca es envolvente, con una acidez ligera que le brinda frescura. Su estructura es muy buena con taninos suaves y redondos y con un complejo y agradable final.",
+    price: 41,
+    stock: 20,
+    highlighted: false,
+    slug: "ALMA-NEGRA-ESPUMANTE-BRUT-NATURE-ROSE",
+  });
+  wine10.save();
+  const wine11 = await Wine.create({
+    name: "BIANCHI FAMIGLIA EXTRA BRUT",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-95astoria-rose2.png",
+    type: "espumante",
+    country: "Argentina",
+    region: "Mendoza",
+    harvest: "2018",
+    cellar: "Bianchi",
+    capacity: "750 ml",
+    tasting:
+      "Impacta a los ojos con reflejos verde-limón. Es seductor, con fragancias florales y frutales, destacándose las notas de jazmín y durazno blanco. Fresco de carácter varietal único amalga perfectamente con notas minerales.",
+    description:
+      "La línea Famiglia, reconocida internacionalmente, nos acerca una gama de vinos complejos e intensos que logran expresar de manera inigualable, las particularidades propias de los viñedos que la familia Bianchi posee en San Rafael y el Valle de Uco. ",
+    price: 29,
+    stock: 24,
+    highlighted: false,
+    slug: "BIANCHI-FAMIGLIA-EXTRA-BRUT",
+  });
+  wine11.save();
+  const wine12 = await Wine.create({
+    name: "BOTRYTIS NOBLE",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-syrah-paysdoc.png",
+    type: "licoroso",
+    country: "Uruguay",
+    region: "Juanico",
+    harvest: "2011",
+    cellar: "Familia Deicas",
+    capacity: "750 ml",
+    tasting:
+      "Color dorado intenso capaz de evolucionar hasta ocre con la crianza. Nariz con aromas de damascos secos, lychee, rosas, miel y ananá. Boca con gran equilibrio de dulzura y acidez, con notas de fruta seca, miel y almendras.",
+    description:
+      "Cosecha Tardía elaborado a partir de racimos sobremadurados, que desarrollan Botrytis Cinerea, gran responsable de los famosos Sauternes y de los mejores Vinos Nobles del mundo. Su desarrollo es muy complejo y requiere microclimas como el de Juanicó, ni muy áridos ni muy cálidos. El preciso ataque de la “botrytis” concentra los granos de uva, haciendo prevalecer el sabor aportado por el hongo sobre el sabor de la variedad.",
+    price: 15,
+    stock: 44,
+    highlighted: false,
+    slug: "BOTRYTIS-NOBLE",
+  });
+  wine12.save();
+  const wine13 = await Wine.create({
+    name: "ANIMAL ORGANIC CHARDONNAY",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-chardonnay-paysdoc.png",
+    type: "blanco",
+    country: "Argentina",
+    region: "Mendoza",
+    harvest: "2018",
+    cellar: "Animal Organic",
+    capacity: "750 ml",
+    tasting: "Amarillo pálido con reflejos verdes. Cítrico con notas a pan tostado.",
+    description:
+      "Desde hace 4 generaciones, la familia Catena ha cultivado vinos a los pies de la Cordillera de los Andes en Mendoza, Argentina. En su búsqueda por hacer vinos que destaquen entre los mejores del mundo, Nicolás Catena identificó los mejores lotes y  filas en los viñedos de la familia Catena.",
+    price: 42,
+    stock: 14,
+    highlighted: false,
+    slug: "ANIMAL-ORGANIC-CHARDONNAY",
+  });
+  wine13.save();
+  const wine14 = await Wine.create({
+    name: "ADRIANNA VINEYARD WHITE BONES CHARDONNAY",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-sauvignonblanc-paysdoc.png",
+    type: "blanco",
+    country: "Argentina",
+    region: "Salta",
+    harvest: "2008",
+    cellar: "Catena Zapata",
+    capacity: "750 ml",
+    tasting: "Aroma floral distintivo con una mineralidad terrosa en nariz y paladar. ",
+    description:
+      "White Bones Chardonnay viene de una selecta hilera dentro del bloque 1 en el viñedo de Adrianna. El nombre refiere a los suelos debajo de estas hileras que está en capas con depósitos calcáreos y piedra caliza, así como huesos de animales fosilizados de un río qe solía pasar por la región.",
+    price: 151,
+    stock: 10,
+    highlighted: false,
+    slug: "ADRIANNA-VINEYARD-WHITE-BONES-CHARDONNAY",
+  });
+  wine14.save();
+  const wine15 = await Wine.create({
+    name: "GARZON RESERVA PINOT NOIR ROSE MAGNUM",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-bordeaux-rose2016.png",
+    type: "rose",
+    country: "Uruguay",
+    region: "Garzon",
+    harvest: "2015",
+    cellar: "Antigua Bodega",
+    capacity: "1500 ml",
+    tasting:
+      "Intenso color rosa con notas amarillentas. Muestra aromas de cereza, moras y ciruelas, ideal para acompañar postres o aperitivos.",
+    description:
+      "Rose Magnum es el resultado de años de experimentación con el Syrah, con el que fuimos pioneros en el Valle de Colchagua. Es un vino seco, seductor y elegante, con un brillante color rosado. Es una excelente expresión de su terroir. En nariz y paladar se muestra el carácter distintivo del Syrah, con notas de frutillas, rosas y naranja. De gran concentración frutal, muestra su riqueza de textura en el paladar con un largo y delicioso final. Posee un fuerte soporte de acidez y una pequeña presencia de taninos que le dan una estructura muy definida.",
+    price: 20,
+    stock: 40,
+    highlighted: false,
+    slug: "GARZON-RESERVA-PINOT-NOIR-ROSE-MAGNU",
+  });
+  wine15.save();
 };
