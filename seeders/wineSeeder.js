@@ -111,7 +111,7 @@ module.exports = async () => {
   wine4.save();
 
   const wine5 = await Wine.create({
-    name: "ANTIGUA BODEGA PRIMA DONNA SAUVIGNON BLANC",
+    name: "ANTIGUA BODEGA PRIMA DONNA ",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-mapu-reserva-cabernet.png",
     type: "tinto",
     country: "Uruguay",
@@ -209,7 +209,7 @@ module.exports = async () => {
   });
   wine9.save();
   const wine10 = await Wine.create({
-    name: "ALMA NEGRA ESPUMANTE BRUT NATURE ROSE",
+    name: "ALMA NEGRA ESPUMANTE BRUT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-astoria-sushi.png",
     type: "espumante",
     country: "Argentina",
@@ -284,7 +284,7 @@ module.exports = async () => {
   });
   wine13.save();
   const wine14 = await Wine.create({
-    name: "ADRIANNA VINEYARD WHITE BONES CHARDONNAY",
+    name: "ADRIANNA VINEYARD WHITE BONES ",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-sauvignonblanc-paysdoc.png",
     type: "blanco",
     country: "Argentina",
@@ -302,7 +302,7 @@ module.exports = async () => {
   });
   wine14.save();
   const wine15 = await Wine.create({
-    name: "GARZON RESERVA PINOT NOIR ROSE MAGNUM",
+    name: "GARZON RESERVA PINOT NOIR ROSE",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-bordeaux-rose2016.png",
     type: "rose",
     country: "Uruguay",
