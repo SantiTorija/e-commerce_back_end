@@ -22,6 +22,7 @@ module.exports = {
     res.json(token);
   },
   store: async function (req, res) {
+    console.log("entre");
     const userExists = await User.findOne({ email: req.body.email });
     if (userExists) {
       return res.status(401).json({ error: "Email already in use!" });
@@ -38,7 +39,7 @@ module.exports = {
       address: req.body.address,
       phone: req.body.phone,
       orders: [],
-      cartList: req.body.cartList
+      cartList: req.body.cartList,
     });
     if (user) return res.status(200).json(user);
     return res.status(400).json("El usuario no ha sido creado");
