@@ -2,34 +2,6 @@ const { Wine } = require("../models");
 const slugify = require("slugify");
 
 module.exports = async () => {
-  /*  for (let i = 0; i < 11; i++) {
-    const wine = await Wine.create({
-      name: "19 CRIMES CABERNET SAUVIGNON",
-      picture:
-        "https://cdn.shopify.com/s/files/1/0042/8477/6517/products/19Crimes-CabSauv-VDM_2000x.jpg",
-      type: "String",
-      country: "Australia",
-      region: "South Eastern Australia",
-      harvest: "2018",
-      cellar: "String",
-      capacity: "750 ml",
-      tasting:
-        "De color rojo brillante a tonalidades carmesí, este vino presenta aromas intensos de vainilla, grosellas rojas, violetas y frutos negros. En la boca se presenta firme y lleno, con una dulzura sutil que da una sensación muy agradable. Los aromas de vainilla continúan en el paladar y complementan sutiles sabores de grosellas rojas, cerezas oscuras y chocolate. Los taninos suaves proporcionan un final persistente.",
-      description:
-        "Fueron 19 crímenes que convirtieron a los convictos en colonos. Tras ser declarados culpables, los rufianes británicos,culpables de al menos uno de los 19 crímenes, fueron condenados a vivir en Australia, en lugar de la pena de muerte. Para estos bravos prisioneros que llegaban a la costa de Australia, les esperaba un nuevo mundo. Como pioneros, en una colonia penal fronteriza, forjaron un nuevo país, forjaron sus nuevas vidas, paso a paso.",
-      price: 40,
-      stock: 10,
-      highlighted: true,
-      slug: slugify("19 CRIMES CABERNET SAUVIGNON", {
-        replacement: "-",
-        remove: undefined,
-        lower: true,
-        remove: /[.]/g,
-      }),
-    });
-    wine.save();
-  } */
-
   const wine = await Wine.create({
     name: "19 CRIMES CABERNET SAUVIGNON",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-astoria-017.png",
@@ -45,8 +17,13 @@ module.exports = async () => {
       "Fueron 19 crímenes que convirtieron a los convictos en colonos. Tras ser declarados culpables, los rufianes británicos,culpables de al menos uno de los 19 crímenes, fueron condenados a vivir en Australia, en lugar de la pena de muerte. Para estos bravos prisioneros que llegaban a la costa de Australia, les esperaba un nuevo mundo. Como pioneros, en una colonia penal fronteriza, forjaron un nuevo país, forjaron sus nuevas vidas, paso a paso.",
     price: 40,
     stock: 10,
-    highlighted: true,
-    slug: "19-CRIMES-CABERNET-SAUVIGNON",
+    highlighted: false,
+    slug: slugify("19 CRIMES CABERNET SAUVIGNON", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine.save();
 
@@ -66,7 +43,12 @@ module.exports = async () => {
     price: 36,
     stock: 10,
     highlighted: false,
-    slug: "AMIRAL-DE-BEYCHEVELLE",
+    slug: slugify("AMIRAL DE BEYCHEVELLE", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine2.save();
 
@@ -86,7 +68,12 @@ module.exports = async () => {
     price: 49,
     stock: 10,
     highlighted: true,
-    slug: "PENFOLDS-GRANGE",
+    slug: slugify("PENFOLDS GRANGE", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine3.save();
 
@@ -106,12 +93,17 @@ module.exports = async () => {
     price: 49,
     stock: 10,
     highlighted: true,
-    slug: "MONTES-CHERUB-ROSE",
+    slug: slugify("MONTES CHERUB ROSE", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine4.save();
 
   const wine5 = await Wine.create({
-    name: "ANTIGUA BODEGA PRIMA DONNA ",
+    name: "ANTIGUA BODEGA PRIMA DONNA",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-mapu-reserva-cabernet.png",
     type: "tinto",
     country: "Uruguay",
@@ -126,7 +118,12 @@ module.exports = async () => {
     price: 33,
     stock: 10,
     highlighted: true,
-    slug: "ANTIGUA-BODEGA-PRIMA-DONNA-SAUVIGNON-BLANC",
+    slug: slugify("ANTIGUA BODEGA PRIMA DONNA", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine5.save();
 
@@ -146,7 +143,12 @@ module.exports = async () => {
     price: 21,
     stock: 10,
     highlighted: true,
-    slug: "FAMILIA-DEICAS-LICOR-DE-TANNAT",
+    slug: slugify("FAMILIA DEICAS LICOR DE TANNAT", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine6.save();
 
@@ -166,7 +168,12 @@ module.exports = async () => {
     price: 11,
     stock: 54,
     highlighted: false,
-    slug: "LOS-VASCOS-ROSE",
+    slug: slugify("LOS VASCOS", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine7.save();
 
@@ -185,7 +192,12 @@ module.exports = async () => {
     price: 19,
     stock: 24,
     highlighted: false,
-    slug: "ANTIGUA-BODEGA-DEL-PEDREGAL-TANNAT",
+    slug: slugify("ANTIGUA BODEGA DEL PEDREGAL TANNAT", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine8.save();
 
@@ -205,7 +217,12 @@ module.exports = async () => {
     price: 39,
     stock: 34,
     highlighted: false,
-    slug: "ANTIGUA-BODEGA-OSIRIS-MERLOT",
+    slug: slugify("ANTIGUA BODEGA OSIRIS MERLOT", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine9.save();
   const wine10 = await Wine.create({
@@ -224,7 +241,12 @@ module.exports = async () => {
     price: 41,
     stock: 20,
     highlighted: false,
-    slug: "ALMA-NEGRA-ESPUMANTE-BRUT-NATURE-ROSE",
+    slug: slugify("ALMA NEGRA ESPUMANTE BRUT", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine10.save();
   const wine11 = await Wine.create({
@@ -243,7 +265,12 @@ module.exports = async () => {
     price: 29,
     stock: 24,
     highlighted: false,
-    slug: "BIANCHI-FAMIGLIA-EXTRA-BRUT",
+    slug: slugify("BIANCHI FAMIGLIA EXTRA BRUT", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine11.save();
   const wine12 = await Wine.create({
@@ -262,7 +289,12 @@ module.exports = async () => {
     price: 15,
     stock: 44,
     highlighted: false,
-    slug: "BOTRYTIS-NOBLE",
+    slug: slugify("BOTRYTIS NOBLE", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine12.save();
   const wine13 = await Wine.create({
@@ -280,11 +312,16 @@ module.exports = async () => {
     price: 42,
     stock: 14,
     highlighted: false,
-    slug: "ANIMAL-ORGANIC-CHARDONNAY",
+    slug: slugify("ANIMAL ORGANIC CHARDONNAY", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine13.save();
   const wine14 = await Wine.create({
-    name: "ADRIANNA VINEYARD WHITE BONES ",
+    name: "ADRIANNA VINEYARD WHITE BONES",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-sauvignonblanc-paysdoc.png",
     type: "blanco",
     country: "Argentina",
@@ -298,7 +335,12 @@ module.exports = async () => {
     price: 151,
     stock: 10,
     highlighted: false,
-    slug: "ADRIANNA-VINEYARD-WHITE-BONES-CHARDONNAY",
+    slug: slugify("ADRIANNA VINEYARD WHITE BONES", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine14.save();
   const wine15 = await Wine.create({
@@ -317,7 +359,12 @@ module.exports = async () => {
     price: 20,
     stock: 40,
     highlighted: false,
-    slug: "GARZON-RESERVA-PINOT-NOIR-ROSE-MAGNU",
+    slug: slugify("GARZON RESERVA PINOT NOIR ROSE", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
   });
   wine15.save();
 };

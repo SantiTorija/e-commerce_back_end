@@ -22,7 +22,6 @@ module.exports = {
     res.json(token);
   },
   store: async function (req, res) {
-    console.log("entro store");
     const userExists = await User.findOne({ email: req.body.email });
     if (userExists) {
       return res.status(401).json({ error: "Email already in use!" });
