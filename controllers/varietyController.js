@@ -1,4 +1,5 @@
-const { Wine, Variety } = require("../models");
+const Wine = require("../models/Wine");
+const Variety = require("../models/Variety");
 
 module.exports = {
   index: async function (req, res) {

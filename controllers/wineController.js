@@ -1,4 +1,4 @@
-const { Wine } = require("../models");
+const Wine = require("../models/Wine");
 
 module.exports = {
   index: async function (req, res) {
@@ -81,8 +81,8 @@ module.exports = {
       if (allWines) return res.json(allWines);
       return res.status(400).json("el vino no ha sido encontrado");
     }
-    const wines = await Wine.find({ "type": tipo });
+    const wines = await Wine.find({ type: tipo });
     if (wines) return res.json(wines);
     return res.status(400).json("el vino no ha sido encontrado");
-  }
+  },
 };

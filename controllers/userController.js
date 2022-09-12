@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const formidable = require("formidable");
 
@@ -7,12 +7,12 @@ module.exports = {
     const { email, password } = req.body;
     const user = await User.findOne({ email: email });
     if (!user) {
-      return res.status(401).json({ error: "Invalid credentials" });
+      return res.status(401).json({ error: "Invalid email" });
     }
-    //const valid = await user.isValidPassword(password, email);
-    //if (!valid) {
-    //  return res.status(401).json({ error: "Invalid credentials" });
-    //}
+    const valid = await user.isValidPassword(password);
+    if (!valid) {
+      return res.status(401).json({ error: "Invalid password" });
+    }
     const token = jwt.sign(
       {
         id: user.id,
@@ -22,6 +22,7 @@ module.exports = {
     res.json(token);
   },
   store: async function (req, res) {
+    console.log("entro store");
     const userExists = await User.findOne({ email: req.body.email });
     if (userExists) {
       return res.status(401).json({ error: "Email already in use!" });
@@ -38,7 +39,7 @@ module.exports = {
       address: req.body.address,
       phone: req.body.phone,
       orders: [],
-      cartList: req.body.cartList
+      cartList: req.body.cartList,
     });
     if (user) return res.status(200).json(user);
     return res.status(400).json("El usuario no ha sido creado");
