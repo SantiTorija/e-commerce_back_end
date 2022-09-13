@@ -8,6 +8,7 @@ const orderSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: "User", required: true },
   products: [{ type: Schema.Types.ObjectId, ref: "Wine", quantity: Number }],
   state: { type: String },
+  address: { type: String },
 });
 
 const Order = mongoose.model("Order", orderSchema);

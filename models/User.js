@@ -5,10 +5,12 @@ const userSchema = new Schema({
   firstname: {
     type: String,
     trim: true,
+    required: "Firstname is required",
   },
   lastname: {
     type: String,
     trim: true,
+    required: "Lastname is required",
   },
   password: {
     type: String,
@@ -29,10 +31,12 @@ const userSchema = new Schema({
   address: {
     type: String,
     trim: true,
+    required: "Address is required",
   },
   phone: {
     type: String,
     trim: true,
+    required: "Phone is required",
   },
   orders: [{ type: Schema.Types.ObjectId, ref: "Order" }],
   cartList: [
