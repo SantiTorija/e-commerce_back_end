@@ -10,8 +10,9 @@ module.exports = {
         total: req.body.total,
         Date: Date(),
         user: myUser._id,
-        products: [req.body.products],
-        state: "sin pagar",
+        products: req.body.products,
+        state: "pagada",
+        address: req.body.address,
       });
       await User.findOneAndUpdate(
         { _id: myUser._id },

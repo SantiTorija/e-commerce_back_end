@@ -7,7 +7,7 @@ module.exports = async () => {
     password: "password",
     email: "carlosperez@gmail.com",
     avatar: "https://i.postimg.cc/gjWvx26P/avataaars.png",
-    adress: "Avenida Rivera 5403",
+    address: "Avenida Rivera 5403",
     phone: "09837428",
   });
   user.save();
@@ -18,7 +18,7 @@ module.exports = async () => {
     password: "password",
     email: "carlasarasa@gmail.com",
     avatar: "https://i.postimg.cc/MHSFzx6n/avataaars-1.png",
-    adress: "Avenida Italia 4324",
+    address: "Avenida Italia 4324",
     phone: "0954395",
   });
   user2.save();
@@ -29,7 +29,7 @@ module.exports = async () => {
     password: "password",
     email: "marcelodanubio1891@gmail.com",
     avatar: "https://i.postimg.cc/sDkdLFSZ/avataaars-2.png",
-    adress: "Bulevar Artigas 5435",
+    address: "Bulevar Artigas 5435",
     phone: "094353",
   });
   user3.save();
