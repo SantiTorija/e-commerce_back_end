@@ -1,23 +1,19 @@
-const { mongoose, Schema } = require("./index");
+const { mongoose, Schema } = require("../dbInitialSetup");
 const bcrypt = require("bcryptjs");
 
 const userSchema = new Schema({
   firstname: {
     type: String,
-
     trim: true,
   },
   lastname: {
     type: String,
-
     trim: true,
   },
   password: {
     type: String,
     required: "Password is required",
     trim: true,
-
-    select: false,
   },
   email: {
     type: String,
@@ -49,10 +45,11 @@ userSchema.pre("save", async function (next) {
   return next();
 });
 
-userSchema.methods.isValidPassword = async function (password) {
-  /* const valid = await bcrypt.compare(password, this.password); */
-  return true;
+userSchema.methods.isValidPassword = async function (candidatePassword) {
+  const match = await bcrypt.compare(candidatePassword, this.password);
+  return match;
 };
+
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;

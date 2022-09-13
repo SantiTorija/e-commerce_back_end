@@ -9,8 +9,8 @@ module.exports = {
     if (!user) {
       return res.status(401).json({ error: "Invalid email" });
     }
-    const valid = await user.isValidPassword(password);
-    if (!valid) {
+    const passOk = await user.isValidPassword(password);
+    if (!passOk) {
       return res.status(401).json({ error: "Invalid password" });
     }
     const token = jwt.sign(

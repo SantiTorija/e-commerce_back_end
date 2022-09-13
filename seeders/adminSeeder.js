@@ -1,4 +1,4 @@
-const { Administrator } = require("../models");
+const Administrator = require("../models/Administrator");
 
 module.exports = async () => {
   const admin = await Administrator.create({

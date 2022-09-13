@@ -1,4 +1,4 @@
-const { Wine } = require("../models");
+const Wine = require("../models/Wine");
 const slugify = require("slugify");
 
 module.exports = async () => {
