@@ -7,7 +7,7 @@ module.exports = {
     const { email, password } = req.body;
     const user = await User.findOne({ email: email });
     if (!user) {
-      return res.status(401).json({ error: "Credenciales invalidales" });
+      return res.status(401).json({ error: "Credenciales invalidas" });
     }
     /* const passOk = await user.isValidPassword(password);
     if (!passOk) {
@@ -55,27 +55,25 @@ module.exports = {
     }
   },
   update: async function (req, res) {
-    const form = formidable({
-      multiples: true,
-      uploadDir: __dirname + "/../public/img",
-      keepExtensions: true,
-    });
-    form.parse(req, async (err, fields, files) => {
-      if (err) {
-        res.status(500).json({ error: err });
-      }
+    const user = await User.findById(req.params.id);
+    if (user) {
+      await User.findOneAndUpdate(
+        { _id: user._id },
+        {
+          firstname: req.body.firstanme,
+          lastname: req.body.lastname,
+          password: req.body.password,
+          email: req.body.email,
+          adress: req.body.adress,
+          phone: req.body.phone,
+        },
+      );
+    }
 
-      const newInfo = {
-        firstname: fields.firstname,
-        lastname: fields.lastname,
-      };
-
-      if (files.avatar) {
-        newInfo.avatar = files.avatar.newFilename;
-      }
-      const user = await User.findByIdAndUpdate(req.params.id, newInfo);
-      res.json(user);
-    });
+    if (wine) {
+      return res.status(200).json("el vino ha sido modificado con exito");
+    }
+    return res.status(400).json("el vino no ha sido encontrado");
   },
   destroy: async function (req, res) {
     const user = await User.findById(req.params.id);

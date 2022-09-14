@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const wineSchema = new Schema({
   name: { type: String },
   picture: { type: String },
-  type: { type: String },
-  variety: { type: Schema.Types.ObjectId, ref: "Variety" },
+  variety: { type: String },
+  type: { type: Number },
   country: { type: String },
   region: { type: String },
   harvest: { type: String },

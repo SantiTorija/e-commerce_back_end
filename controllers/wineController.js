@@ -2,7 +2,7 @@ const Wine = require("../models/Wine");
 
 module.exports = {
   index: async function (req, res) {
-    const wines = await Wine.find().populate("variety");
+    const wines = await Wine.find();
     res.json(wines);
   },
   store: async function (req, res) {
@@ -75,13 +75,15 @@ module.exports = {
     return res.status(400).json("el vino no ha sido encontrado");
   },
   showType: async function (req, res) {
-    const tipo = req.params.type.toLowerCase();
-    if (tipo === "todos") {
+    console.log(req.params.type);
+    const tipo = parseInt(req.params.type);
+    if (tipo === 0) {
       const allWines = await Wine.find();
       if (allWines) return res.json(allWines);
       return res.status(400).json("el vino no ha sido encontrado");
     }
     const wines = await Wine.find({ type: tipo });
+    console.log(wines);
     if (wines) return res.json(wines);
     return res.status(400).json("el vino no ha sido encontrado");
   },

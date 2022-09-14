@@ -40,6 +40,11 @@ adminSchema.pre("save", async function (next) {
   return next();
 });
 
+adminSchema.methods.isValidPassword = async function (candidatePassword) {
+  const match = await bcrypt.compare(candidatePassword, this.password);
+  return match;
+};
+
 const Administrator = mongoose.model("Administrator", adminSchema);
 
 module.exports = Administrator;

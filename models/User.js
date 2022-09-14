@@ -24,10 +24,6 @@ const userSchema = new Schema({
     unique: true,
     required: "Email address is required",
   },
-  avatar: {
-    type: String,
-    trim: true,
-  },
   address: {
     type: String,
     trim: true,

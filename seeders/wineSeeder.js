@@ -1,12 +1,16 @@
 const Wine = require("../models/Wine");
 const slugify = require("slugify");
 
+function randomNumber() {
+  return Math.floor(Math.random() * 4 + 1);
+}
+
 module.exports = async () => {
   const wine = await Wine.create({
     name: "19 CRIMES CABERNET SAUVIGNON",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-astoria-017.png",
-    type: "tinto",
     country: "Australia",
+    type: 1,
     region: "South Eastern Australia",
     harvest: "2018",
     cellar: "Bodega Gold Coast",
@@ -30,8 +34,8 @@ module.exports = async () => {
   const wine2 = await Wine.create({
     name: "AMIRAL DE BEYCHEVELLE",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-mouton-cadet-rouge.png",
-    type: "tinto",
     country: "Francia",
+    type: 1,
     region: "St. Julien",
     harvest: "2019",
     cellar: "Bodega Joseph 54",
@@ -55,9 +59,9 @@ module.exports = async () => {
   const wine3 = await Wine.create({
     name: "PENFOLDS GRANGE",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-domaine-barondarques.png",
-    type: "tinto",
     country: "Austalia",
     region: "South Australia",
+    type: 1,
     harvest: "2015",
     cellar: "Bodega Penfolds",
     capacity: "750 ml",
@@ -80,9 +84,9 @@ module.exports = async () => {
   const wine4 = await Wine.create({
     name: "MONTES CHERUB ROSE",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-dreamline-rose.png",
-    type: "rose",
     country: "Chile",
     region: "Casablanca",
+    type: 3,
     harvest: "2016",
     cellar: "Bodega Montes",
     capacity: "750 ml",
@@ -105,11 +109,11 @@ module.exports = async () => {
   const wine5 = await Wine.create({
     name: "ANTIGUA BODEGA PRIMA DONNA",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-mapu-reserva-cabernet.png",
-    type: "tinto",
     country: "Uruguay",
     region: "Canelones",
     harvest: "2015",
     cellar: "Antigua Bodega",
+    type: 2,
     capacity: "750 ml",
     tasting:
       "Color amarillo pálido con tonos verdosos. Aroma de maracuyá, manzana verde, ananá, frutos tropicales y flores frescas.",
@@ -130,11 +134,12 @@ module.exports = async () => {
   const wine6 = await Wine.create({
     name: "FAMILIA DEICAS LICOR DE TANNAT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-montecastrillo.png",
-    type: "licoroso",
+
     country: "Uruguay",
     region: "Canelones",
     harvest: "2015",
     cellar: "Familia Deicas",
+    type: 5,
     capacity: "750 ml",
     tasting:
       "Color negro intenso. En nariz se presenta aroma de higos maduros, menta y chocolate. En boca se muestra muy amable con un notable equilibrio frutal, dulce y tánico. Ideal para acompañar postres, especialmente de chocolate, así como quesos o como licor de sobremesa. ",
@@ -155,9 +160,9 @@ module.exports = async () => {
   const wine7 = await Wine.create({
     name: "LOS VASCOS",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-cabernet-paysdoc.png",
-    type: "tinto",
     country: "Chile",
     region: "Colchagua",
+    type: 1,
     harvest: "2019",
     cellar: "Los Vascos",
     capacity: "750 ml",
@@ -180,11 +185,11 @@ module.exports = async () => {
   const wine8 = await Wine.create({
     name: "ANTIGUA BODEGA DEL PEDREGAL TANNAT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-reserve-bourgogne.png",
-    type: "tinto",
     country: "Uruguay",
     region: "Canelones",
     harvest: "2015",
     cellar: "Antigua Bodega",
+    type: 1,
     capacity: "750 ml",
     tasting: "Intenso color rubí. Aromas a frutos del bosque y chocolate amargo",
     description:
@@ -204,11 +209,11 @@ module.exports = async () => {
   const wine9 = await Wine.create({
     name: "ANTIGUA BODEGA OSIRIS MERLOT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-syrah-paysdoc.png",
-    type: "tinto",
     country: "Uruguay",
     region: "Canelones",
     harvest: "2011",
     cellar: "Antigua Bodega",
+    type: 1,
     capacity: "750 ml",
     tasting:
       "Intenso color violáceo oscuro. Muestra aromas de cereza, moras y ciruelas con notas de café, chocolate y vainilla.",
@@ -228,7 +233,7 @@ module.exports = async () => {
   const wine10 = await Wine.create({
     name: "ALMA NEGRA ESPUMANTE BRUT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-astoria-sushi.png",
-    type: "espumante",
+    type: 3,
     country: "Argentina",
     region: "Mendoza",
     harvest: "2015",
@@ -252,7 +257,7 @@ module.exports = async () => {
   const wine11 = await Wine.create({
     name: "BIANCHI FAMIGLIA EXTRA BRUT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-95astoria-rose2.png",
-    type: "espumante",
+    type: 4,
     country: "Argentina",
     region: "Mendoza",
     harvest: "2018",
@@ -276,7 +281,7 @@ module.exports = async () => {
   const wine12 = await Wine.create({
     name: "BOTRYTIS NOBLE",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-syrah-paysdoc.png",
-    type: "licoroso",
+    type: 2,
     country: "Uruguay",
     region: "Juanico",
     harvest: "2011",
@@ -300,9 +305,9 @@ module.exports = async () => {
   const wine13 = await Wine.create({
     name: "ANIMAL ORGANIC CHARDONNAY",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-chardonnay-paysdoc.png",
-    type: "blanco",
     country: "Argentina",
     region: "Mendoza",
+    type: 4,
     harvest: "2018",
     cellar: "Animal Organic",
     capacity: "750 ml",
@@ -323,9 +328,9 @@ module.exports = async () => {
   const wine14 = await Wine.create({
     name: "ADRIANNA VINEYARD WHITE BONES",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-sauvignonblanc-paysdoc.png",
-    type: "blanco",
     country: "Argentina",
     region: "Salta",
+    type: 2,
     harvest: "2008",
     cellar: "Catena Zapata",
     capacity: "750 ml",
@@ -346,9 +351,9 @@ module.exports = async () => {
   const wine15 = await Wine.create({
     name: "GARZON RESERVA PINOT NOIR ROSE",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-bordeaux-rose2016.png",
-    type: "rose",
     country: "Uruguay",
     region: "Garzon",
+    type: 3,
     harvest: "2015",
     cellar: "Antigua Bodega",
     capacity: "1500 ml",

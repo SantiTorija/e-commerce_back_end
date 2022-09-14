@@ -6,6 +6,7 @@ module.exports = async () => {
   console.log("[Database] La base de datos fue vaciada");
 
   // Ejecutar seeders (datos de prueba):
+  await require("./typeSeeder")();
   await require("./userSeeder")();
   await require("./adminSeeder")();
   await require("./wineSeeder")();
