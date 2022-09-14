@@ -1,16 +1,14 @@
 const Wine = require("../models/Wine");
+const Type = require("../models/Type");
 const slugify = require("slugify");
 
-function randomNumber() {
-  return Math.floor(Math.random() * 4 + 1);
-}
-
 module.exports = async () => {
+  const types = await Type.find();
   const wine = await Wine.create({
     name: "19 CRIMES CABERNET SAUVIGNON",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-astoria-017.png",
     country: "Australia",
-    type: "",
+    type: types[0]._id,
     region: "South Eastern Australia",
     harvest: "2018",
     cellar: "Bodega Gold Coast",
@@ -35,7 +33,7 @@ module.exports = async () => {
     name: "AMIRAL DE BEYCHEVELLE",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-mouton-cadet-rouge.png",
     country: "Francia",
-    type: "",
+    type: types[0]._id,
     region: "St. Julien",
     harvest: "2019",
     cellar: "Bodega Joseph 54",
@@ -61,7 +59,7 @@ module.exports = async () => {
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-domaine-barondarques.png",
     country: "Austalia",
     region: "South Australia",
-    type: "",
+    type: types[0]._id,
     harvest: "2015",
     cellar: "Bodega Penfolds",
     capacity: "750 ml",
@@ -86,7 +84,7 @@ module.exports = async () => {
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-dreamline-rose.png",
     country: "Chile",
     region: "Casablanca",
-    type: "",
+    type: types[2]._id,
     harvest: "2016",
     cellar: "Bodega Montes",
     capacity: "750 ml",
@@ -113,7 +111,7 @@ module.exports = async () => {
     region: "Canelones",
     harvest: "2015",
     cellar: "Antigua Bodega",
-    type: "",
+    type: types[4]._id,
     capacity: "750 ml",
     tastingNote:
       "Color amarillo pálido con tonos verdosos. Aroma de maracuyá, manzana verde, ananá, frutos tropicales y flores frescas.",
@@ -139,7 +137,7 @@ module.exports = async () => {
     region: "Canelones",
     harvest: "2015",
     cellar: "Familia Deicas",
-    type: "",
+    type: types[0]._id,
     capacity: "750 ml",
     tastingNote:
       "Color negro intenso. En nariz se presenta aroma de higos maduros, menta y chocolate. En boca se muestra muy amable con un notable equilibrio frutal, dulce y tánico. Ideal para acompañar postres, especialmente de chocolate, así como quesos o como licor de sobremesa. ",
@@ -162,7 +160,7 @@ module.exports = async () => {
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-cabernet-paysdoc.png",
     country: "Chile",
     region: "Colchagua",
-    type: "",
+    type: types[0]._id,
     harvest: "2019",
     cellar: "Los Vascos",
     capacity: "750 ml",
@@ -189,7 +187,7 @@ module.exports = async () => {
     region: "Canelones",
     harvest: "2015",
     cellar: "Antigua Bodega",
-    type: "",
+    type: types[0]._id,
     capacity: "750 ml",
     tastingNote: "Intenso color rubí. Aromas a frutos del bosque y chocolate amargo",
     description:
@@ -213,7 +211,7 @@ module.exports = async () => {
     region: "Canelones",
     harvest: "2011",
     cellar: "Antigua Bodega",
-    type: "",
+    type: types[0]._id,
     capacity: "750 ml",
     tastingNote:
       "Intenso color violáceo oscuro. Muestra aromas de cereza, moras y ciruelas con notas de café, chocolate y vainilla.",
@@ -233,7 +231,7 @@ module.exports = async () => {
   const wine10 = await Wine.create({
     name: "ALMA NEGRA ESPUMANTE BRUT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-astoria-sushi.png",
-    type: "",
+    type: types[0]._id,
     country: "Argentina",
     region: "Mendoza",
     harvest: "2015",
@@ -257,7 +255,7 @@ module.exports = async () => {
   const wine11 = await Wine.create({
     name: "BIANCHI FAMIGLIA EXTRA BRUT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-95astoria-rose2.png",
-    type: "",
+    type: types[4]._id,
     country: "Argentina",
     region: "Mendoza",
     harvest: "2018",
@@ -281,7 +279,7 @@ module.exports = async () => {
   const wine12 = await Wine.create({
     name: "BOTRYTIS NOBLE",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-syrah-paysdoc.png",
-    type: "",
+    type: types[3]._id,
     country: "Uruguay",
     region: "Juanico",
     harvest: "2011",
@@ -307,7 +305,7 @@ module.exports = async () => {
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-chardonnay-paysdoc.png",
     country: "Argentina",
     region: "Mendoza",
-    type: "",
+    type: types[1]._id,
     harvest: "2018",
     cellar: "Animal Organic",
     capacity: "750 ml",
@@ -330,7 +328,7 @@ module.exports = async () => {
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-sauvignonblanc-paysdoc.png",
     country: "Argentina",
     region: "Salta",
-    type: "",
+    type: types[1]._id,
     harvest: "2008",
     cellar: "Catena Zapata",
     capacity: "750 ml",
@@ -353,7 +351,7 @@ module.exports = async () => {
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-bordeaux-rose2016.png",
     country: "Uruguay",
     region: "Garzon",
-    type: "",
+    type: types[2]._id,
     harvest: "2015",
     cellar: "Antigua Bodega",
     capacity: "1500 ml",

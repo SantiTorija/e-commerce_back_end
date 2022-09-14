@@ -35,9 +35,7 @@ const userSchema = new Schema({
     required: "Phone is required",
   },
   orders: [{ type: Schema.Types.ObjectId, ref: "Order" }],
-  cartList: [
-    { wine: { type: Schema.Types.ObjectId, ref: "Wine" }, quantity: { quantity: Number } },
-  ],
+  cartList: [{}],
 });
 
 userSchema.pre("save", async function (next) {
