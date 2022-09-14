@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const typeSchema = new Schema({
   name: { type: String },
-  code: { type: Number },
+  code: { type: String },
 });
 
 const Type = mongoose.model("Type", typeSchema);
