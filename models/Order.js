@@ -6,7 +6,7 @@ const orderSchema = new Schema({
   total: { type: Number },
   Date: { type: Date },
   user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-  products: [{ type: Schema.Types.ObjectId, ref: "Wine", quantity: Number }],
+  products: [{}],
   state: { type: String },
   address: { type: String },
 });
