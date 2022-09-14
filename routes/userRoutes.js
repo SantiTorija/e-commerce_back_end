@@ -7,7 +7,7 @@ const jwtcheck = checkJwt({ secret: process.env.CLAVE_SECRETA, algorithms: ["HS2
 
 userRoutes.post("/", userController.store);
 userRoutes.post("/token", userController.token);
-userRoutes.get("/", jwtcheck, userController.index);
+userRoutes.get("/", userController.index);
 userRoutes.get("/:id", jwtcheck, userController.show);
 userRoutes.delete("/:id", jwtcheck, userController.destroy);
 userRoutes.patch("/:id", jwtcheck, userController.update);
