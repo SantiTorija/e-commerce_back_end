@@ -5,7 +5,7 @@ const wineSchema = new Schema({
   name: { type: String },
   picture: { type: String },
   variety: { type: String },
-  type: { type: Number },
+  type: { type: Schema.Types.ObjectId, ref: "Type" },
   country: { type: String },
   region: { type: String },
   harvest: { type: String },
