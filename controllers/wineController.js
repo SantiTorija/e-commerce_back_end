@@ -38,7 +38,7 @@ module.exports = {
     return res.status(400).json("El vino no ha sido encontrado");
   },
   show: async function (req, res) {
-    const wine = await Wine.findOne({ slug: req.params.slug }).populate("variety");
+    const wine = await Wine.findOne({ slug: req.params.slug });
     if (wine) {
       return res.json(wine);
     }
@@ -75,7 +75,6 @@ module.exports = {
     return res.status(400).json("el vino no ha sido encontrado");
   },
   showType: async function (req, res) {
-    console.log(req.params.type);
     const tipo = parseInt(req.params.type);
     if (tipo === 0) {
       const allWines = await Wine.find();
@@ -83,7 +82,6 @@ module.exports = {
       return res.status(400).json("el vino no ha sido encontrado");
     }
     const wines = await Wine.find({ type: tipo });
-    console.log(wines);
     if (wines) return res.json(wines);
     return res.status(400).json("el vino no ha sido encontrado");
   },

@@ -4,6 +4,7 @@ const User = require("../models/User");
 module.exports = {
   store: async function (req, res) {
     const myUser = await User.findById(req.auth.id);
+    console.log(myUser);
     if (myUser) {
       const order = await Order.create({
         email: myUser.email,

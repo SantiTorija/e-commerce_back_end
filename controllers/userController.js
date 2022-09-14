@@ -56,24 +56,23 @@ module.exports = {
   },
   update: async function (req, res) {
     const user = await User.findById(req.params.id);
+    console.log(user);
     if (user) {
       await User.findOneAndUpdate(
         { _id: user._id },
         {
-          firstname: req.body.firstanme,
-          lastname: req.body.lastname,
-          password: req.body.password,
-          email: req.body.email,
-          adress: req.body.adress,
-          phone: req.body.phone,
+          firstname: req.body.firstname || user.firstname,
+          lastname: req.body.lastname || user.lastname,
+          password: req.body.password || user.password,
+          email: req.body.email || user.email,
+          address: req.body.address || user.address,
+          phone: req.body.phone || user.phone,
         },
       );
+      const updatedUser = await User.findById(req.params.id);
+      return res.status(200).json(updatedUser);
     }
-
-    if (wine) {
-      return res.status(200).json("el vino ha sido modificado con exito");
-    }
-    return res.status(400).json("el vino no ha sido encontrado");
+    return res.status(401).json({ error: "El usuario no fue encontrado" });
   },
   destroy: async function (req, res) {
     const user = await User.findById(req.params.id);
