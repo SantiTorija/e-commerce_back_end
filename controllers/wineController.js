@@ -1,8 +1,9 @@
 const Wine = require("../models/Wine");
+const Type = require("../models/Type");
 
 module.exports = {
   index: async function (req, res) {
-    const wines = await Wine.find();
+    const wines = await Wine.find().populate("type");
     res.json(wines);
   },
   store: async function (req, res) {
@@ -38,7 +39,7 @@ module.exports = {
     return res.status(400).json("El vino no ha sido encontrado");
   },
   show: async function (req, res) {
-    const wine = await Wine.findOne({ slug: req.params.slug });
+    const wine = await Wine.findOne({ slug: req.params.slug }).populate("type");
     if (wine) {
       return res.json(wine);
     }
@@ -75,14 +76,20 @@ module.exports = {
     return res.status(400).json("el vino no ha sido encontrado");
   },
   showType: async function (req, res) {
-    const tipo = parseInt(req.params.type);
-    if (tipo === 0) {
-      const allWines = await Wine.find();
-      if (allWines) return res.json(allWines);
-      return res.status(400).json("el vino no ha sido encontrado");
+    if (req.params.type === "todos") {
+      const wines = await Wine.find().populate("type");
+      return res.json(wines);
     }
-    const wines = await Wine.find({ type: tipo });
-    if (wines) return res.json(wines);
+    const wines = await Wine.find().populate("type");
+    if (wines) {
+      const response = [];
+      for (let i = 0; i < wines.length; i++) {
+        if (wines[i].type.name === req.params.type) {
+          response.push(wines[i]);
+        }
+      }
+      return res.status(200).json(response);
+    }
     return res.status(400).json("el vino no ha sido encontrado");
   },
 };
