@@ -1,5 +1,6 @@
 const Wine = require("../models/Wine");
 const Type = require("../models/Type");
+const slugify = require("slugify");
 
 module.exports = {
   index: async function (req, res) {
@@ -7,6 +8,7 @@ module.exports = {
     res.json(wines);
   },
   store: async function (req, res) {
+    console.log("lo cree");
     function generatedSlug(info) {
       slugify(info, {
         replacement: "-",
