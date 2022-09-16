@@ -5,7 +5,7 @@ const { expressjwt: checkJwt } = require("express-jwt");
 
 /* const jwtcheck = checkJwt({ secret: process.env.CLAVE_SECRETA, algorithms: ["HS256"] }); */
 
-adminRoutes.get("/token", adminController.token);
+adminRoutes.post("/token", adminController.token);
 adminRoutes.post("/", adminController.store);
 adminRoutes.get("/", adminController.index);
 adminRoutes.delete("/:id", adminController.destroy);

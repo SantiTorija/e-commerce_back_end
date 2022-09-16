@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 module.exports = {
   token: async function (req, res) {
     const { email, password } = req.body;
+    console.log(req.body);
     const admin = await Admin.findOne({ email: email });
     if (!admin) {
       return res.status(401).json({ error: "Credenciales invalidas" });

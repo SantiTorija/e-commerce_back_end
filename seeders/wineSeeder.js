@@ -384,4 +384,29 @@ module.exports = async () => {
     }),
   });
   wine15.save();
+  /*  const wine16 = await Wine.create({
+    name: "",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663338084/ecommerce/njuy0icl5ewnz8xtyq5u.png",
+    country: "",
+    region: "",
+    type: types[]._id,
+    harvest: "",
+    cellar: "",
+    capacity: " ml",
+    
+    description:"",
+    
+    price: ,
+    stock: ,
+    highlighted: ,
+    slug: slugify("", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine16.save();
+ */
 };
