@@ -7,9 +7,9 @@ const jwtcheck = checkJwt({ secret: process.env.CLAVE_SECRETA, algorithms: ["HS2
 
 wineRoutes.get("/", wineController.index);
 wineRoutes.get("/:slug", wineController.show);
-wineRoutes.post("/", jwtcheck, wineController.store);
-wineRoutes.patch("/:id", jwtcheck, wineController.update);
-wineRoutes.delete("/:id", jwtcheck, wineController.destroy);
+wineRoutes.post("/", wineController.store);
+wineRoutes.patch("/:id", wineController.update);
+wineRoutes.delete("/:id", wineController.destroy);
 wineRoutes.get("/filter/:type", wineController.showType);
 
 module.exports = wineRoutes;

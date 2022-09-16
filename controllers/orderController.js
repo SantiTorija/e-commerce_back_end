@@ -40,10 +40,8 @@ module.exports = {
     return res.status(400).json("el order no ha sido encontrado");
   },
   index: async function (req, res) {
-    if (req.auth.id) {
-      const orders = await Order.find({ user: req.auth.id });
-      if (orders) return res.status(200).json(orders);
-    }
-    return res.status(400).json("error en el token");
+    const orders = await Order.find();
+    if (orders) return res.status(200).json(orders);
+    return res.status(400).json({ error: "no se encontraron ordenes" });
   },
 };

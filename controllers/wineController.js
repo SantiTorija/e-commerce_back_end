@@ -1,5 +1,6 @@
 const Wine = require("../models/Wine");
 const Type = require("../models/Type");
+const slugify = require("slugify");
 
 module.exports = {
   index: async function (req, res) {
@@ -7,6 +8,15 @@ module.exports = {
     res.json(wines);
   },
   store: async function (req, res) {
+    console.log("lo cree");
+    function generatedSlug(info) {
+      slugify(info, {
+        replacement: "-",
+        remove: undefined,
+        lower: true,
+        remove: /[.]/g,
+      });
+    }
     const wine = await Wine.create({
       name: req.body.name,
       picture: req.body.picture,
@@ -22,7 +32,7 @@ module.exports = {
       price: req.body.price,
       stock: req.body.stock,
       highlighted: req.body.highlighted,
-      slug: req.body.slug,
+      slug: generatedSlug(req.body.name),
     });
     if (wine) {
       return res.status(200).json("el vino ha sido creado con exito");
