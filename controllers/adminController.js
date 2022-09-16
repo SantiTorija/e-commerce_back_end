@@ -1,6 +1,5 @@
 const Admin = require("../models/Administrator");
 const jwt = require("jsonwebtoken");
-const formidable = require("formidable");
 
 module.exports = {
   token: async function (req, res) {
@@ -62,7 +61,7 @@ module.exports = {
     return res.status(400).json("No se han encontrado admins");
   },
   destroy: async function (req, res) {
-    const admin = await Admin.findById(req.body.id);
+    const admin = await Admin.findById(req.params.id);
     if (admin) {
       await Admin.deleteOne({ id: admin._id });
       return res.status(200).json("El usuario ha sido borrado con exito");

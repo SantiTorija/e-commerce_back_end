@@ -6,7 +6,8 @@ module.exports = async () => {
   const types = await Type.find();
   const wine = await Wine.create({
     name: "19 CRIMES CABERNET SAUVIGNON",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-astoria-017.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663300244/ecommerce/19Crimes-tinto_rftahx.png",
     country: "Australia",
     type: types[0]._id,
     region: "South Eastern Australia",
@@ -31,7 +32,8 @@ module.exports = async () => {
 
   const wine2 = await Wine.create({
     name: "AMIRAL DE BEYCHEVELLE",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-mouton-cadet-rouge.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663301670/ecommerce/AMIRAL_DE_BEYCHEVELLE_dopkpg.png",
     country: "Francia",
     type: types[0]._id,
     region: "St. Julien",
@@ -56,7 +58,8 @@ module.exports = async () => {
 
   const wine3 = await Wine.create({
     name: "PENFOLDS GRANGE",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-domaine-barondarques.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663301477/ecommerce/PENFOLDS_GRANGE_zom2sz.png",
     country: "Austalia",
     region: "South Australia",
     type: types[0]._id,
@@ -81,7 +84,8 @@ module.exports = async () => {
 
   const wine4 = await Wine.create({
     name: "MONTES CHERUB ROSE",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-dreamline-rose.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663301375/ecommerce/MONTES_CHERUB_ROSE_p2zzrr.png",
     country: "Chile",
     region: "Casablanca",
     type: types[2]._id,
@@ -106,7 +110,8 @@ module.exports = async () => {
 
   const wine5 = await Wine.create({
     name: "ANTIGUA BODEGA PRIMA DONNA",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-mapu-reserva-cabernet.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663301851/ecommerce/ANTIGUA_BODEGA_PRIMA_DONNA_lniurv.png",
     country: "Uruguay",
     region: "Canelones",
     harvest: "2015",
@@ -129,9 +134,9 @@ module.exports = async () => {
   });
   wine5.save();
 
-  const wine6 = await Wine.create({
+  /* const wine6 = await Wine.create({
     name: "FAMILIA DEICAS LICOR DE TANNAT",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-montecastrillo.png",
+    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-montecastrillo.png", 
 
     country: "Uruguay",
     region: "Canelones",
@@ -152,12 +157,13 @@ module.exports = async () => {
       lower: true,
       remove: /[.]/g,
     }),
-  });
-  wine6.save();
+  }); 
+  wine6.save();*/
 
   const wine7 = await Wine.create({
     name: "LOS VASCOS",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-cabernet-paysdoc.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663302221/ecommerce/LOS_VASCOS_c6yfx7.png",
     country: "Chile",
     region: "Colchagua",
     type: types[0]._id,
@@ -182,7 +188,8 @@ module.exports = async () => {
 
   const wine8 = await Wine.create({
     name: "ANTIGUA BODEGA DEL PEDREGAL TANNAT",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-reserve-bourgogne.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663302589/ecommerce/ANTIGUA_BODEGA_DEL_PEDREGAL_TANNAT_gwvflq.png",
     country: "Uruguay",
     region: "Canelones",
     harvest: "2015",
@@ -206,7 +213,8 @@ module.exports = async () => {
 
   const wine9 = await Wine.create({
     name: "ANTIGUA BODEGA OSIRIS MERLOT",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-syrah-paysdoc.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663302696/ecommerce/ANTIGUA_BODEGA_OSIRIS_MERLOT_ekzjgf.png",
     country: "Uruguay",
     region: "Canelones",
     harvest: "2011",
@@ -230,7 +238,8 @@ module.exports = async () => {
   wine9.save();
   const wine10 = await Wine.create({
     name: "ALMA NEGRA ESPUMANTE BRUT",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-astoria-sushi.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663303138/ecommerce/ALMA_NEGRA_ESPUMANTE_BRUT_cgnrvp.png",
     type: types[0]._id,
     country: "Argentina",
     region: "Mendoza",
@@ -254,7 +263,8 @@ module.exports = async () => {
   wine10.save();
   const wine11 = await Wine.create({
     name: "BIANCHI FAMIGLIA EXTRA BRUT",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-95astoria-rose2.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663303249/ecommerce/BIANCHI_FAMIGLIA_EXTRA_BRUT_a4vf8n.png",
     type: types[4]._id,
     country: "Argentina",
     region: "Mendoza",
@@ -278,7 +288,8 @@ module.exports = async () => {
   wine11.save();
   const wine12 = await Wine.create({
     name: "BOTRYTIS NOBLE",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-syrah-paysdoc.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663303625/ecommerce/ALEJANDRO_FERN%C3%81NDEZ_PESQUERA_CRIANZA_noqmdw.png",
     type: types[3]._id,
     country: "Uruguay",
     region: "Juanico",
@@ -302,7 +313,8 @@ module.exports = async () => {
   wine12.save();
   const wine13 = await Wine.create({
     name: "ANIMAL ORGANIC CHARDONNAY",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-chardonnay-paysdoc.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663304516/ecommerce/i8j0k0o6chldthyymxdy.png",
     country: "Argentina",
     region: "Mendoza",
     type: types[1]._id,
@@ -325,7 +337,8 @@ module.exports = async () => {
   wine13.save();
   const wine14 = await Wine.create({
     name: "ADRIANNA VINEYARD WHITE BONES",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-sauvignonblanc-paysdoc.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663304639/ecommerce/vb0fc6qdav3w4sog30iv.png",
     country: "Argentina",
     region: "Salta",
     type: types[1]._id,
@@ -348,7 +361,8 @@ module.exports = async () => {
   wine14.save();
   const wine15 = await Wine.create({
     name: "GARZON RESERVA PINOT NOIR ROSE",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-bordeaux-rose2016.png",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663304851/ecommerce/lpnuvntr89s1wqw6mkct.png",
     country: "Uruguay",
     region: "Garzon",
     type: types[2]._id,
