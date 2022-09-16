@@ -384,23 +384,23 @@ module.exports = async () => {
     }),
   });
   wine15.save();
-  /*  const wine16 = await Wine.create({
-    name: "",
+
+  const wine16 = await Wine.create({
+    name: "ZUCCARDI Z",
     picture:
-      "https://res.cloudinary.com/dazcipdps/image/upload/v1663338084/ecommerce/njuy0icl5ewnz8xtyq5u.png",
-    country: "",
-    region: "",
-    type: types[]._id,
-    harvest: "",
-    cellar: "",
-    capacity: " ml",
-    
-    description:"",
-    
-    price: ,
-    stock: ,
-    highlighted: ,
-    slug: slugify("", {
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663339368/ecommerce/ld7ll18t5pa7ovp5tu9v.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[0]._id,
+    harvest: 2010,
+    cellar: "Familia Zuccardi",
+    capacity: "750 ml",
+    description:
+      "Color violeta rojizo intenso y vivaz. Atractivo e intenso, con aromas especiados y frutos negros. A las notas de ciruelas, frutillas, arándanos y membrillos se suman toques a pimienta negra, tabaco, pimientos rojos asados, chocolate, trufas y moras le agregan complejidad.",
+    price: 32,
+    stock: 41,
+    highlighted: false,
+    slug: slugify("ZUCCARDI Z", {
       replacement: "-",
       remove: undefined,
       lower: true,
@@ -408,5 +408,532 @@ module.exports = async () => {
     }),
   });
   wine16.save();
- */
+
+  const wine17 = await Wine.create({
+    name: "STAGS LEAP CHARDONNAY",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663339694/ecommerce/zzpey6zxpm3hwlrrxjls.png",
+    country: "Estados Unidos",
+    region: "Napa Valley",
+    type: types[1]._id,
+    harvest: 2017,
+    cellar: "STAGS LEAP",
+    capacity: "750 ml",
+    description:
+      "Nuestro Chardonnay de Napa Valley se prensa suavemente con racimo entero para preservar los aromas frescos y florales que se producen naturalmente en la fruta. El 25% del vino se fermenta en acero inoxidable y permanece en el tanque hasta que se ensambla la mezcla final. Otro 25% es fermentado y envejecido en barricas nuevas de roble francés y el 50% restante en roble francés de segundo uso. Este tratamiento de barril específico ayuda a preservar la pureza esencial de la fruta al tiempo que agrega notas sutiles de la complejidad del roble. La añada 2017, como de costumbre, no experimentó fermentación maloláctica, lo que ayuda a mantener aún más la acidez natural y la frescura aromática de la fruta. El vino fue embotellado después de solo seis meses de maduración con un battonage semanal, poniendo las lías de levadura en suspensión para liberar notas aromáticas sutiles, aumentar la sensación en la boca y prevenir cualidades reductoras.",
+    price: 89,
+    stock: 15,
+    highlighted: true,
+    slug: slugify("STAGS LEAP CHARDONNAY", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine17.save();
+
+  const wine18 = await Wine.create({
+    name: "VICENTIN BLANC DE MALBEC",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663340187/ecommerce/vrm9lsrcktsp0kux353i.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[2]._id,
+    harvest: 2010,
+    cellar: "Vicentin Family Wines",
+    capacity: "750 ml",
+    description:
+      "Somos una familia con visión de progreso y trabajo. Hace más de un siglo que construímos futuro, desde Argentina, nuestra tierra. Comenzamos la aventura en el año 2009 con el viaje desde el litoral, desde las plantaciones de algodón y girasol hasta el desierto salvaje, frente a la Cordillera de los Andes, donde buscamos los viñedos de los productores más antiguos de las zonas vitivinícolas de Mendoza para contar con la mejor prima materia, la de los mejores taninos y los mejores frutos.",
+    price: 17,
+    stock: 23,
+    highlighted: false,
+    slug: slugify("VICENTIN BLANC DE MALBEC", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine18.save();
+
+  const wine19 = await Wine.create({
+    name: "VIÑA EDEN ESPUMANTE MÉTODO CHAMPENOISE",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663340419/ecommerce/dw3kd5jgypabi0ugaclt.png",
+    country: "Uruguay",
+    region: "Durazno",
+    type: types[3]._id,
+    harvest: 2015,
+    cellar: "Viña Eden",
+    capacity: "750 ml",
+    description:
+      "Sobre las pedregosas sierras de Pueblo Edén se hallan nuestros viñedos, el carácter mineral de sus suelos y la influencia oceánica, generan las condiciones ideales para la creación y producción sustentable de vinos de estilo único. A minutos de Punta del Este, sobre la panorámica Ruta 12 que nace en el Atlántico y se abre paso entre las sierras se encuentra Viña Edén, un lugar excepcional para vivir una experiencia única. Fuertes pendientes, suelos pedregosos y la influencia del Océano Atlántico caracterizan nuestro terroir. El carácter mineral de los suelos y la influencia oceánica, producen condiciones ideales para la creación de vinos de estilo único.Aromas delicados frutados y burbujas muy pequeñas, en boca se presenta fresco y elegante.",
+    price: 39,
+    stock: 31,
+    highlighted: true,
+    slug: slugify("VIÑA EDEN ESPUMANTE MÉTODO CHAMPENOISE", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine19.save();
+
+  const wine20 = await Wine.create({
+    name: "TIKAL AMORIO",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663340704/ecommerce/l9goffg0kdqq0wca0qnx.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[0]._id,
+    harvest: 2012,
+    cellar: "Tikal Natural",
+    capacity: "750 ml",
+    description:
+      "Rojo intenso y brillante. Tiene una expresión aromática que impacta en la primer nariz que luego mantiene y eso lo hace mas atractivo aun, porque cada vez que se lo vuelve a apreciar permite ir sumando mas notas aromáticas sin que las anteriores se vayan, lo que lo hace un vino complejo y gustoso. Notas de miel, caramelo, café;, algo de cuero, frutas negras como las moras y arándanos y notas terrosas y húmedas.",
+    price: 71,
+    stock: 45,
+    highlighted: false,
+    slug: slugify("TIKAL AMORIO", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine20.save();
+
+  const wine21 = await Wine.create({
+    name: "SANTA JULIA RESERVA CHARDONNAY",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663340852/ecommerce/yoktv75grqwa0boe6dea.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[1]._id,
+    harvest: 2017,
+    cellar: "Santa Julia",
+    capacity: "750 ml",
+    description:
+      "Amarillo verdoso brillante. Encontramos frutas blancas maduras, peras, manzanas y banana, frutas tropicales, con notas de la maduración en barricas sobre las borras como vainilla, coco, manteca y miel. Este vino reúne la frescura de aromas típicos del chardonnay con la estructura que brinda el paso por barricas. De textura cremosa y final refrescante.",
+    price: 14,
+    stock: 54,
+    highlighted: false,
+    slug: slugify("SANTA JULIA RESERVA CHARDONNAY", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine21.save();
+
+  const wine22 = await Wine.create({
+    name: "AMALAYA ROSÉ",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663341107/ecommerce/m9alocfvg8yhelbvspmw.png",
+    country: "Argentina",
+    region: "Valle Clachaqui, Salta",
+    type: types[2]._id,
+    harvest: 2020,
+    cellar: "Amalaya",
+    capacity: "750 ml",
+    description:
+      "Rosa salmón delicado y brillante. Ataque floral muy sutil con dejos de azahares que provienen del Torrontés y notas a cereza y frutilla, típicas del malbec.",
+    price: 20,
+    stock: 41,
+    highlighted: false,
+    slug: slugify("AMALAYA ROSÉ", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine22.save();
+
+  const wine23 = await Wine.create({
+    name: "MOET IMPERIAL",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663341241/ecommerce/ruglhi4izbrfyaysappl.png",
+    country: "Francia",
+    region: "Paris",
+    type: types[3]._id,
+    harvest: 2010,
+    cellar: "Moet & Chandon",
+    capacity: "750 ml",
+    description:
+      "Generosidad y sutileza: la deliciosa generosidad de las frutas blancas: peras, durazno, manzana. La caricia seductora de las finas burbujas. La suave vivacidad de frutas cítricas y los matices de grosella espinosa.",
+    price: 54,
+    stock: 24,
+    highlighted: false,
+    slug: slugify("MOET IMPERIAL", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine23.save();
+
+  const wine24 = await Wine.create({
+    name: "TERRITORIO CABERNET SAUVIGNON",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663341508/ecommerce/zgznvt61mywnjnxnkvgs.png",
+    country: "Argentina",
+    region: "Salta",
+    type: types[0]._id,
+    harvest: 2019,
+    cellar: "Territorio",
+    capacity: "750 ml",
+    description:
+      "Rojo profundo con matices violáceos brillantes. Aromas frutados donde predominan notas a ciruelas y vainillas y tostados.",
+    price: 18,
+    stock: 85,
+    highlighted: true,
+    slug: slugify("TERRITORIO CABERNET SAUVIGNON", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine24.save();
+
+  const wine25 = await Wine.create({
+    name: "MARICHAL RESERVE ",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663341648/ecommerce/at8exjnzp4hegcyvevw7.png",
+    country: "Uruguay",
+    region: "Canelones",
+    type: types[1]._id,
+    harvest: 2018,
+    cellar: "Marichal",
+    capacity: "750 ml",
+    description:
+      "Color amarillo oro. Nariz citrica y avainillada. En boca es agradable, de buen volumen nos recuerda a frutas blancas pomelo, ananá, coco y vainilla.",
+    price: 16,
+    stock: 65,
+    highlighted: false,
+    slug: slugify("MARICHAL RESERVE COLLECTION CHARDONNAY", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine25.save();
+
+  const wine26 = await Wine.create({
+    name: "ANDELUNA MALBEC ROSÉ",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663341810/ecommerce/yvvjdnfxtjqnmwbzojqz.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[2]._id,
+    harvest: 2020,
+    cellar: "Andeluna",
+    capacity: "750 ml",
+    description:
+      "Presenta un radiante y pálido matiz color salmón. Intensa expresión de frutos rojos como guinda y cereza, también se destacan aromas a rosas rojas. Se aprecian los gustos de fruto rojo pequeño en conjunto con una frescura proveniente de una equilibrada acidez. de cata ",
+    price: 25,
+    stock: 45,
+    highlighted: false,
+    slug: slugify("ANDELUNA MALBEC ROSÉ", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine26.save();
+
+  const wine27 = await Wine.create({
+    name: "MARÍA CODORNÍU BRUT",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663341989/ecommerce/gjhdsjag61z1lswudqaw.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[3]._id,
+    harvest: 2015,
+    cellar: "Séptima",
+    capacity: "750 ml",
+    description:
+      "Espumoso elaborado con uvas Chardonnay y Pinot Noir provenientes de diferentes viñedos ubicados en la región del valle de Uco, donde se combinan suelos franco-arcilloso, y pedregosos con incidencia calcárea.  Las condiciones de suelo dadas en estos valles de altura ubicados entre 1100 y 1400 m. s. n. m al pie de la Cordillera de los Andes. Todo esto permite que los vinos obtenidos de los diferentes viñedos tengan características diferenciales y particulares que garantizan mantener la personalidad de Maria Codorníu cosecha tras cosecha. ",
+    price: 54,
+    stock: 43,
+    highlighted: true,
+    slug: slugify("MARÍA CODORNÍU BRUT", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine27.save();
+
+  const wine28 = await Wine.create({
+    name: "SANTA JULIA RESERVA BONARDA",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663342221/ecommerce/bx2xhxpekfy7th6m65jb.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[0]._id,
+    harvest: 2009,
+    cellar: "Santa Julia",
+    capacity: "750 ml",
+    description:
+      "De un atractivo color rojo violáceo, vivaz y profundo. Notas de frutas negras como guindas, cerezas, grosellas y aromas propios de la maduración en madera como cacao, vainilla, tabaco y algunas especias.",
+    price: 21,
+    stock: 54,
+    highlighted: true,
+    slug: slugify("SANTA JULIA RESERVA BONARDA", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine28.save();
+
+  const wine29 = await Wine.create({
+    name: "RICCITELLI & FATHER",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663342342/ecommerce/d3sehahelrir5ws188iq.png",
+    country: "Argentina",
+    region: "Las compuertas, Luján de Cuyo",
+    type: types[0]._id,
+    harvest: 2014,
+    cellar: "Matías Riccitelli",
+    capacity: "750 ml",
+    description:
+      "Corte de gran intensidad aromática, frutos negros, regalíz, especies y flores de naríz. En el paladar notable equilibrio, con taninos firmes pero elegantes. Un vino delicado y eléctrico que representa muy bien dos generaciones de enólogos.",
+    price: 34,
+    stock: 33,
+    highlighted: false,
+    slug: slugify("RICCITELLI & FATHER", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine29.save();
+
+  const wine30 = await Wine.create({
+    name: "PUNTA DE FLECHAS MALBEC",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663342482/ecommerce/kydvnqz0a8fva4bujzdn.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[0]._id,
+    harvest: 2013,
+    cellar: "Flechas de los Andes",
+    capacity: "750 ml",
+    description:
+      "De color rojo límpido, intenso, con reflejos violáceos, es un vino fresco con notas a frutos rojos. De entrada amable de frescura aromática, es un vino untuoso, redondo y fácil de beber. Posee un final elegante y persistente.",
+    price: 52,
+    stock: 87,
+    highlighted: true,
+    slug: slugify("PUNTA DE FLECHAS MALBEC", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine30.save();
+
+  const wine31 = await Wine.create({
+    name: "COBOS MARCHIORI ",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663344639/ecommerce/qwzoimc63m48db1qstaz.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[1]._id,
+    harvest: 2018,
+    cellar: "Cobos",
+    capacity: "750 ml",
+    description:
+      "El color limpio y vibrante de este chardonnay nos prepara para un vino muy elegante, de gran frescura y vivacidad; amarillo pálido con tonos verdes y destellos dorados. En nariz encontramos un delicado bouquet floral, con notas sutiles a frutas tropicales, manzana verde y un acento herbal. Se destaca su mineralidad, al tiempo que nos deleita con aromas a pan tostado, manteca de cacao, chocolate blanco y vainilla. En boca es redondo, con excelente concentración; tiene una marcada acidez y buen volumen, es untuoso y persistente. Tiene un final pronunciado, largo, con un placentero recuerdo a duraznos secos y mucha fruta.",
+    price: 106,
+    stock: 34,
+    highlighted: true,
+    slug: slugify("COBOS BRAMARE MARCHIORI VINEYARD CHARDONNAY", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine31.save();
+
+  const wine32 = await Wine.create({
+    name: "BOLLA PROSECCO",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663342967/ecommerce/kcuzyvleka1zs0r2zyd5.png",
+    country: "Italia",
+    region: "Veneto",
+    type: types[3]._id,
+    harvest: 2010,
+    cellar: "Bolla",
+    capacity: "750 ml",
+    description:
+      "Tiene un color pajizo pálido con aromas limpios de limón, manzana y un toque de melocotón. Muy refrescante en el paladar.",
+    price: 25,
+    stock: 65,
+    highlighted: false,
+    slug: slugify("BOLLA PROSECCO", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine32.save();
+
+  const wine33 = await Wine.create({
+    name: "LAGRIMA DE ORO BRUT ROSE",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663343133/ecommerce/wpvi6izhf5bp1clfxtop.png",
+    country: "Uruguay",
+    region: "Tacuarembó",
+    type: types[3]._id,
+    harvest: 2015,
+    cellar: "Domaine de Larvol",
+    capacity: "750 ml",
+    description:
+      "De color rosa pálido con tenue con reflejos piel de cebolla, nariz compleja donde se mezclan las levaduras, panetone, fruta roja, pan tostado y un leve vestigio floral. En boca su ingreso es muy sutil burbuja muy bien incorporada, acidez en equilibrio y con final prolongado.",
+    price: 21,
+    stock: 54,
+    highlighted: false,
+    slug: slugify("LAGRIMA DE ORO BRUT ROSE", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine33.save();
+
+  const wine34 = await Wine.create({
+    name: "MONTES CLASSIC CHARDONNAY",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663343294/ecommerce/a68rpynrkhfrwwqf5wfs.png",
+    country: "Chile",
+    region: "Curico",
+    type: types[1]._id,
+    harvest: 2016,
+    cellar: "Montes",
+    capacity: "750 ml",
+    description:
+      "Dorado pálido con tonalidades verdes. Su aroma combina mantequilla, toques de vainilla y frutas tropicales (sobretodo plátano).",
+    price: 29,
+    stock: 65,
+    highlighted: true,
+    slug: slugify("MONTES CLASSIC CHARDONNAY", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine34.save();
+
+  const wine35 = await Wine.create({
+    name: "MARICHAL BLANC DE NOIRS",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663343445/ecommerce/sfk0ma8zyheagug16mup.png",
+    country: "Uruguay",
+    region: "Canelones",
+    type: types[2]._id,
+    harvest: 2018,
+    cellar: "Marichal",
+    capacity: "750 ml",
+    description:
+      "Brillante, límpido y transparente con un color salmón con reflejos cobrizos que recuerdan a la piel de cebolla. Presenta notas características del Chardonnay como ser el ananá y el pomelo rosado, con notas de durazno fresco, en combinación con las notas características de los frutos rojos proporcionados por el Pinot Noir. Agradable entrada en boca. Se presenta suave, con un sabor diferente y muy sorprendente, untuoso con una acidez moderada marcada por la fruta. Presenta un final medio. Maridaje: Ideal para acompañar con aperitivos, paella, salmón y arroces con verduras. Marida muy bien con cheesecake de frutos rojos.",
+    price: 12,
+    stock: 99,
+    highlighted: false,
+    slug: slugify("MARICHAL RESERVE COLLECTION BLANC DE NOIRS", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine35.save();
+
+  const wine36 = await Wine.create({
+    name: "RICCITELLI HEY ROSÉ",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663343706/ecommerce/dv1ipy1affkhpzsutkyj.png",
+    country: "Argentina",
+    region: "Perdriel, Lujan de Cuyo",
+    type: types[2]._id,
+    harvest: 2019,
+    cellar: "Matías Riccitelli",
+    capacity: "750 ml",
+    description:
+      "De hermoso color rosado salmón. En naríz presenta aromas de flores blancas y cítricos. Un vino fresco y elegante perfecto para un atardecer de verano. ",
+    price: 26,
+    stock: 65,
+    highlighted: false,
+    slug: slugify("RICCITELLI HEY ROSE", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine36.save();
+
+  const wine38 = await Wine.create({
+    name: "RETO CABERNET SAUVIGNON",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663343855/ecommerce/vmj3tk2mmjrmzl3awyln.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[0]._id,
+    harvest: 2011,
+    cellar: "Vicentin Family Wines",
+    capacity: "750 ml",
+    description:
+      "Somos una familia con visión de progreso y trabajo. Hace más de un siglo que construímos futuro, desde Argentina, nuestra tierra. Comenzamos la aventura en el año 2009 con el viaje desde el litoral, desde las plantaciones de algodón y girasol hasta el desierto salvaje, frente a la Cordillera de los Andes, donde buscamos los viñedos de los productores más antiguos de las zonas vitivinícolas de Mendoza para contar con la mejor prima materia, la de los mejores taninos y los mejores frutos.",
+    price: 11,
+    stock: 56,
+    highlighted: false,
+    slug: slugify("RETO CABERNET SAUVIGNON", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine38.save();
+
+  const wine39 = await Wine.create({
+    name: "MOUTON CADET KOSHER",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663343980/ecommerce/g3obfbil5to0yilluj51.png",
+    country: "Francia",
+    region: "Bordeaux",
+    type: types[0]._id,
+    harvest: 2016,
+    cellar: "Baron Philippe de Rothschild",
+    capacity: "750 ml",
+    description:
+      "Desde los inicios, la producción de Mouton Cadet se ha basado en las habilidades y la experiencia de los viticultores de Bordeaux para dar al vino su identidad única. Los enólogos de Baron Philippe de Rothschild perpetúan esa experiencia eligiendo cuidadosamente las parcelas de viña por sus cualidades particulares. El resultado son vinos de reconocimiento mundial y su gran calidad.",
+    price: 65,
+    stock: 60,
+    highlighted: false,
+    slug: slugify("MOUTON CADET KOSHER", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine39.save();
 };
