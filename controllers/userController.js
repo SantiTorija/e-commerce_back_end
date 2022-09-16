@@ -50,13 +50,11 @@ module.exports = {
       });
       if (user) return res.status(200).json(user);
     } catch (error) {
-      console.log(error);
       return res.status(400).json({ error: "Complete todos los campos" });
     }
   },
   update: async function (req, res) {
     const user = await User.findById(req.params.id);
-    console.log(user);
     if (user) {
       await User.findOneAndUpdate(
         { _id: user._id },

@@ -39,7 +39,6 @@ module.exports = {
       });
       if (admin) return res.status(200).json(admin);
     } catch (error) {
-      console.log(error);
       return res.status(400).json({ error: "Complete todos los campos" });
     }
   },

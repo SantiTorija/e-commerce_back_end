@@ -111,7 +111,7 @@ module.exports = async () => {
     region: "Canelones",
     harvest: "2015",
     cellar: "Antigua Bodega",
-    type: types[4]._id,
+    type: types[3]._id,
     capacity: "750 ml",
     tasting:
       "Color amarillo pálido con tonos verdosos. Aroma de maracuyá, manzana verde, ananá, frutos tropicales y flores frescas.",
@@ -255,7 +255,7 @@ module.exports = async () => {
   const wine11 = await Wine.create({
     name: "BIANCHI FAMIGLIA EXTRA BRUT",
     picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-95astoria-rose2.png",
-    type: types[4]._id,
+    type: types[3]._id,
     country: "Argentina",
     region: "Mendoza",
     harvest: "2018",

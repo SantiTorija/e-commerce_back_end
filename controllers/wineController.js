@@ -33,7 +33,6 @@ module.exports = {
     const wine = await Wine.findById(req.params.id);
     if (wine) {
       await Wine.deleteOne({ _id: wine._id });
-      console.log("lo borre");
       return res.status(200).json("El vino ha sido borrado con exito");
     }
     return res.status(400).json("El vino no ha sido encontrado");
