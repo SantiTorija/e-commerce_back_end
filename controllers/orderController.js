@@ -1,5 +1,6 @@
 const Order = require("../models/Order");
 const User = require("../models/User");
+const Wine = require("../models/Wine");
 
 module.exports = {
   store: async function (req, res) {
@@ -20,6 +21,14 @@ module.exports = {
           orders: [...myUser.orders, order._id],
         },
       );
+      for (const wine of req.body.products) {
+        await Wine.findOneAndUpdate(
+          { _id: wine._id },
+          {
+            stock: wine.stock - wine.cartQuantity,
+          },
+        );
+      }
       return res.status(200).json("la order fue creada con exito");
     }
     return res.status(400).json("la order no fue creada");
