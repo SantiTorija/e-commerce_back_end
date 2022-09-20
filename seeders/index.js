@@ -5,7 +5,7 @@ module.exports = async () => {
 
   //await mongoose.connection.dropDatabase();
   //console.log("[Database] La base de datos fue vaciada");
-
+  console.log("corri_seeders");
   // Ejecutar seeders (datos de prueba):
   await require("./typeSeeder")();
   await require("./userSeeder")();
