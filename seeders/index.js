@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 module.exports = async () => {
   // Borrar base de datos:
+
   //await mongoose.connection.dropDatabase();
   //console.log("[Database] La base de datos fue vaciada");
 
