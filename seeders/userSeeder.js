@@ -5,7 +5,7 @@ module.exports = async () => {
     firstname: "Carlos",
     lastname: "Perez",
     password: "password",
-    email: "carlosperez@gmail.com",
+    email: "username@gmail.com",
     avatar: "https://i.postimg.cc/gjWvx26P/avataaars.png",
     address: "Avenida Rivera 5403",
     phone: "09837428",
