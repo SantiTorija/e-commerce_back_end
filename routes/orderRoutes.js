@@ -8,5 +8,5 @@ orderRouter.use(checkJwt({ secret: process.env.CLAVE_SECRETA, algorithms: ["HS25
 orderRouter.post("/", orderController.store);
 orderRouter.patch("/:id", orderController.update);
 orderRouter.get("/", orderController.index); // actualizar el estado
-
+orderRouter.get("/:id", orderController.show);
 module.exports = orderRouter;

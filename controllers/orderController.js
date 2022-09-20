@@ -3,6 +3,7 @@ const User = require("../models/User");
 
 module.exports = {
   store: async function (req, res) {
+    console.log(req.auth);
     const myUser = await User.findById(req.auth.id);
     if (myUser) {
       const order = await Order.create({
@@ -30,18 +31,21 @@ module.exports = {
       await Order.findOneAndUpdate(
         { _id: order._id },
         {
-          total: req.body.total,
-          products: [req.body.products],
           state: req.body.state,
         },
       );
-      return res.status(200).json("el order ha sido modificado con exito");
+      return res.status(200).json("la orden ha sido modificado con exito");
     }
-    return res.status(400).json("el order no ha sido encontrado");
+    return res.status(400).json("la orden no ha sido encontrada");
   },
   index: async function (req, res) {
     const orders = await Order.find();
     if (orders) return res.status(200).json(orders);
     return res.status(400).json({ error: "no se encontraron ordenes" });
+  },
+  show: async function (req, res) {
+    const order = await Order.findById(req.params.id).populate("user");
+    if (order) return res.status(200).json(order);
+    return res.status(400).json({ error: "no se encontraro la orden" });
   },
 };

@@ -22,6 +22,8 @@ module.exports = {
     res.json({
       token,
       id: admin._id,
+      firstname: admin.firstname,
+      lastname: admin.lastname,
       email: admin.email,
     });
   },
@@ -65,6 +67,13 @@ module.exports = {
     if (admin) {
       await Admin.deleteOne({ id: admin._id });
       return res.status(200).json("El usuario ha sido borrado con exito");
+    }
+    return res.status(400).json("el usuario no ha sido encontrado");
+  },
+  show: async function (req, res) {
+    const admin = await Admin.findById(req.params.id);
+    if (admin) {
+      return res.status(200).json(admin);
     }
     return res.status(400).json("el usuario no ha sido encontrado");
   },

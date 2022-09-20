@@ -9,8 +9,19 @@ module.exports = {
   },
   store: async function (req, res) {
     console.log("lo cree");
+    const types = await Type.find();
+    let wineType;
+    if (req.body.type === "Tinto") {
+      wineType = types[0]._id;
+    } else if (req.body.type === "Blanco") {
+      wineType = types[1]._id;
+    } else if (req.body.type === "Rose") {
+      wineType = types[2]._id;
+    } else {
+      wineType = types[3].id;
+    }
     function generatedSlug(info) {
-      slugify(info, {
+      return slugify(info, {
         replacement: "-",
         remove: undefined,
         lower: true,
@@ -20,7 +31,7 @@ module.exports = {
     const wine = await Wine.create({
       name: req.body.name,
       picture: req.body.picture,
-      type: req.body.type,
+      type: wineType,
       variety: req.body.variety,
       country: req.body.country,
       region: req.body.region,
@@ -56,25 +67,44 @@ module.exports = {
   },
   update: async function (req, res) {
     const wine = await Wine.findById(req.params.id);
+    function generatedSlug(info) {
+      return slugify(info, {
+        replacement: "-",
+        remove: undefined,
+        lower: true,
+        remove: /[.]/g,
+      });
+    }
+    const types = await Type.find();
+    let wineType;
+    if (req.body.type === "Tinto") {
+      wineType = types[0]._id;
+    } else if (req.body.type === "Blanco") {
+      wineType = types[1]._id;
+    } else if (req.body.type === "Rose") {
+      wineType = types[2]._id;
+    } else {
+      wineType = types[3].id;
+    }
+
     if (wine) {
       await Wine.findOneAndUpdate(
         { _id: wine._id },
         {
           name: req.body.name,
           picture: req.body.picture,
-          type: req.body.type,
+          type: wineType,
           variety: req.body.variety,
           country: req.body.country,
           region: req.body.region,
           harvest: req.body.harvest,
           cellar: req.body.cellar,
           capacity: req.body.capacity,
-          tastingNote: req.body.tastingNote,
           description: req.body.description,
           price: req.body.price,
           stock: req.body.stock,
           highlighted: req.body.highlighted,
-          slug: req.body.slug,
+          slug: generatedSlug(req.body.name),
         },
       );
     }

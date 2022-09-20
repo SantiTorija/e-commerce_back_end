@@ -21,9 +21,4 @@ module.exports = async () => {
     code: 4,
   });
   type4.save();
-  const type5 = await Type.create({
-    name: "licoroso",
-    code: 5,
-  });
-  type5.save();
 };
