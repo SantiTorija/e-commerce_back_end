@@ -1,7 +1,7 @@
 const Administrator = require("../models/Administrator");
 
 module.exports = async () => {
-  const admin = await Administrator.create({
+  const admin = await new Administrator({
     firstname: "Jose",
     lastname: "Admin",
     password: "password",
