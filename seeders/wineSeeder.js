@@ -240,7 +240,7 @@ module.exports = async () => {
     name: "ALMA NEGRA ESPUMANTE BRUT",
     picture:
       "https://res.cloudinary.com/dazcipdps/image/upload/v1663303138/ecommerce/ALMA_NEGRA_ESPUMANTE_BRUT_cgnrvp.png",
-    type: types[0]._id,
+    type: types[3]._id,
     country: "Argentina",
     region: "Mendoza",
     harvest: "2015",
@@ -290,7 +290,7 @@ module.exports = async () => {
     name: "BOTRYTIS NOBLE",
     picture:
       "https://res.cloudinary.com/dazcipdps/image/upload/v1663303625/ecommerce/ALEJANDRO_FERN%C3%81NDEZ_PESQUERA_CRIANZA_noqmdw.png",
-    type: types[3]._id,
+    type: types[0]._id,
     country: "Uruguay",
     region: "Juanico",
     harvest: "2011",
@@ -936,4 +936,220 @@ module.exports = async () => {
     }),
   });
   wine39.save();
+
+  const wine40 = await Wine.create({
+    name: "ANTIGUA BODEGA PRIMA DONNA SAUVIGNON BLANC",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663725081/ecommerce/cftwmaakdfjxbilmcsxw.png",
+    country: "Uruguay",
+    region: "Canelones",
+    type: types[1]._id,
+    harvest: 2015,
+    cellar: "Antigua Bodega",
+    capacity: " 750 ml",
+    description:
+      "Color amarillo pálido con tonos verdosos. Aroma de maracuyá, manzana verde, ananá, frutos tropicales y flores frescas.",
+    price: 13,
+    stock: 43,
+    highlighted: false,
+    slug: slugify("", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine40.save();
+
+  const wine41 = await Wine.create({
+    name: "COLOMÉ TORRONTÉS",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663725346/ecommerce/cqjewio44faufvlkif7r.png",
+    country: "Argentina",
+    region: "Salta",
+    type: types[1]._id,
+    harvest: 2020,
+    cellar: "COLOMÉ",
+    capacity: "750 ml",
+    description:
+      "Es un vino elegante, se destacan notas florales a jazmín y cítricas. En boca es fresco, redondo y de buen cuerpo. El final es largo y de una gran fineza.",
+    price: 21,
+    stock: 54,
+    highlighted: true,
+    slug: slugify("COLOMÉ TORRONTÉS", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine41.save();
+
+  const wine42 = await Wine.create({
+    name: "COBOS BRAMARE MARCHIORI VINEYARD CHARDONNAY 2018",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663725504/ecommerce/chbq76cytnyjpalnaspa.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[1]._id,
+    harvest: 2018,
+    cellar: "Cobos",
+    capacity: "750 ml",
+    description:
+      "El color limpio y vibrante de este chardonnay nos prepara para un vino muy elegante, de gran frescura y vivacidad; amarillo pálido con tonos verdes y destellos dorados. En nariz encontramos un delicado bouquet floral, con notas sutiles a frutas tropicales, manzana verde y un acento herbal. Se destaca su mineralidad, al tiempo que nos deleita con aromas a pan tostado, manteca de cacao, chocolate blanco y vainilla. En boca es redondo, con excelente concentración; tiene una marcada acidez y buen volumen, es untuoso y persistente. Tiene un final pronunciado, largo, con un placentero recuerdo a duraznos secos y mucha fruta.",
+    price: 123,
+    stock: 98,
+    highlighted: false,
+    slug: slugify("COBOS BRAMARE MARCHIORI VINEYARD CHARDONNAY 2018", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine42.save();
+
+  const wine43 = await Wine.create({
+    name: "COMPAÑÍA URUGUAYA DE VINOS DE MAR - SIERRA DE LAS PALMAS ALBARIÑO 2020",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663725796/ecommerce/icyndp9dpepxvbiitw0v.png",
+    country: "Uruguay",
+    region: "Maldonado",
+    type: types[1]._id,
+    harvest: 2020,
+    cellar: "Albariño",
+    capacity: "750 ml",
+    description:
+      "Uva prensada, fermentación en fudres de 2000 litros de roble tirolés. Levaduras indígenas. Sin desborres ni batonajes. Crianza de 6 meses en los mismos fudres, sin rellenos ni desfangados. Embotellado en Setiembre de 2020.",
+    price: 103,
+    stock: 100,
+    highlighted: false,
+    slug: slugify("COMPAÑÍA URUGUAYA DE VINOS DE MAR - SIERRA DE LAS PALMAS ALBARIÑO 2020", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine43.save();
+
+  const wine44 = await Wine.create({
+    name: "KAIKEN ESTATE ROSE MALBEC",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663725971/ecommerce/plvfccpe7gqz3hhvukgx.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[2]._id,
+    harvest: 2019,
+    cellar: "Kaiken",
+    capacity: "750 ml",
+    description:
+      "Presenta un color rojo cereza, límpido y de gran intensidad. Con aromas frutales, de frutillas maceradas y elegantes notas de violetas que aumentan su complejidad. En boca es un vino con cuerpo, en perfecta armonía con su delicada acidez. Se muestra fresco, delicado y seductor, un perfecto compañero para diversos tipos de comidas. Este es un vino que combina de manera única el frescor de los mejores rosados con el cuerpo y suavidad única de nuestros más queridos malbecs.",
+    price: 13,
+    stock: 56,
+    highlighted: false,
+    slug: slugify("KAIKEN ESTATE ROSE MALBEC", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine44.save();
+
+  const wine45 = await Wine.create({
+    name: "MOUTON CADET ROSE",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663726089/ecommerce/lxyrbje7qu3ypmvwoup5.png",
+    country: "Francia",
+    region: "Bordeaux",
+    type: types[2]._id,
+    harvest: 2016,
+    cellar: "Philippe de Rothschild",
+    capacity: "750 ml",
+    description:
+      "Desde los inicios, la producción de Mouton Cadet se ha basado en las habilidades y la experiencia de los viticultores de Bordeaux para dar al vino su identidad única. Los enólogos de Baron Philippe de Rothschild perpetúan esa experiencia eligiendo cuidadosamente las parcelas de viña por sus cualidades particulares. El resultado son vinos de reconocimiento mundial y su gran calidad.",
+    price: 54,
+    stock: 65,
+    highlighted: false,
+    slug: slugify("MOUTON CADET ROSE", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine45.save();
+
+  const wine46 = await Wine.create({
+    name: "MIOLO CUVEE TRADITION ESPUMANTE BRUT",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663726530/ecommerce/lkagkake7qof7f5an4u6.png",
+    country: "Brasil",
+    region: "Vale Dos Vinhedos",
+    type: types[3]._id,
+    harvest: 2020,
+    cellar: "Miolo",
+    capacity: "750 ml",
+    description:
+      "De color dorado tenue con reflejos verdes, nariz compleja donde se mezclan las levaduras, panetone, fruta abrillantada, pan tostado y un leve vestigio cítrico. En boca su ingreso es muy sutil burbuja muy bien incorporada, acidez en equilibrio y con final prolongado.",
+    price: 54,
+    stock: 38,
+    highlighted: false,
+    slug: slugify("MIOLO CUVEE TRADITION ESPUMANTE BRUT", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine46.save();
+
+  const wine47 = await Wine.create({
+    name: "BANFI VIGNE REGALI ASTI ESPUMANTE",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663726300/ecommerce/zqdlatxzfculsgqo77qz.png",
+    country: "Italia",
+    region: "Milán",
+    type: types[3]._id,
+    harvest: 2017,
+    cellar: "Castello Banfi",
+    capacity: "750 ml",
+    description:
+      "Intenso y frutal con una expresión elegante de aromas típicos Moscato, salvia y flor de durazno. Dulce, crujiente, aromático y armoniosamente delicado en el paladar.",
+    price: 21,
+    stock: 65,
+    highlighted: false,
+    slug: slugify("BANFI VIGNE REGALI ASTI ESPUMANTE", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine47.save();
+
+  const wine48 = await Wine.create({
+    name: "VICENTIN ESPUMANTE ROSE",
+    picture:
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663726410/ecommerce/dldx3p3tcju05ambtw2k.png",
+    country: "Argentina",
+    region: "Mendoza",
+    type: types[3]._id,
+    harvest: 2019,
+    cellar: "Vicentin Family Wines",
+    capacity: "750 ml",
+    description:
+      "Somos una familia con visión de progreso y trabajo. Hace más de un siglo que construímos futuro, desde Argentina, nuestra tierra. Comenzamos la aventura en el año 2009 con el viaje desde el litoral, desde las plantaciones de algodón y girasol hasta el desierto salvaje, frente a la Cordillera de los Andes, donde buscamos los viñedos de los productores más antiguos de las zonas vitivinícolas de Mendoza para contar con la mejor prima materia, la de los mejores taninos y los mejores frutos.",
+    price: 16,
+    stock: 53,
+    highlighted: false,
+    slug: slugify("VICENTIN ESPUMANTE ROSE", {
+      replacement: "-",
+      remove: undefined,
+      lower: true,
+      remove: /[.]/g,
+    }),
+  });
+  wine48.save();
 };
