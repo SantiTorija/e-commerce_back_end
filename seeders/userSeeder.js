@@ -14,9 +14,9 @@ module.exports = async () => {
 
   const user2 = await User.create({
     firstname: "Carla",
-    lastname: "Sarasa",
+    lastname: "Gonzalez",
     password: "password",
-    email: "carlasarasa@gmail.com",
+    email: "carlagonzalez@gmail.com",
     avatar: "https://i.postimg.cc/MHSFzx6n/avataaars-1.png",
     address: "Avenida Italia 4324",
     phone: "0954395",

@@ -114,7 +114,7 @@ module.exports = {
     }
     return res.status(400).json("el vino no ha sido encontrado");
   },
-  showType: async function (req, res) {
+  filter: async function (req, res) {
     if (req.params.type === "todos") {
       const wines = await Wine.find().populate("type");
       return res.json(wines);
@@ -130,5 +130,19 @@ module.exports = {
       return res.status(200).json(response);
     }
     return res.status(400).json("el vino no ha sido encontrado");
+  },
+  search: async function (req, res) {
+    const buscar = req.params.wineName.toLowerCase();
+    if (buscar) {
+      const wines = await Wine.find().populate("type");
+      const winesSearched = [];
+      for (const wine of wines) {
+        if (wine.name.toLowerCase().indexOf(buscar) === 0) {
+          winesSearched.push(wine);
+        }
+      }
+      return res.status(200).json(winesSearched);
+    }
+    return res.status(400).json({ error: "el vino no ha sido encontrado" });
   },
 };
