@@ -986,9 +986,9 @@ module.exports = async () => {
   wine41.save();
 
   const wine42 = await Wine.create({
-    name: "COBOS BRAMARE MARCHIORI VINEYARD CHARDONNAY 2018",
+    name: "COBOS MARCHIORI VINEYARD CHARDONNAY 2018",
     picture:
-      "https://res.cloudinary.com/dazcipdps/image/upload/v1663725504/ecommerce/chbq76cytnyjpalnaspa.png",
+      "https://res.cloudinary.com/dazcipdps/image/upload/v1663770401/ecommerce/giqmhgdhngtjnqrwd7mz.png",
     country: "Argentina",
     region: "Mendoza",
     type: types[1]._id,
@@ -1000,7 +1000,7 @@ module.exports = async () => {
     price: 123,
     stock: 98,
     highlighted: false,
-    slug: slugify("COBOS BRAMARE MARCHIORI VINEYARD CHARDONNAY 2018", {
+    slug: slugify("COBOS MARCHIORI VINEYARD CHARDONNAY 2018", {
       replacement: "-",
       remove: undefined,
       lower: true,
@@ -1010,7 +1010,7 @@ module.exports = async () => {
   wine42.save();
 
   const wine43 = await Wine.create({
-    name: "COMPAÑÍA URUGUAYA DE VINOS DE MAR - SIERRA DE LAS PALMAS ALBARIÑO 2020",
+    name: "SIERRA DE LAS PALMAS ALBARIÑO 2020",
     picture:
       "https://res.cloudinary.com/dazcipdps/image/upload/v1663725796/ecommerce/icyndp9dpepxvbiitw0v.png",
     country: "Uruguay",
@@ -1024,7 +1024,7 @@ module.exports = async () => {
     price: 103,
     stock: 100,
     highlighted: false,
-    slug: slugify("COMPAÑÍA URUGUAYA DE VINOS DE MAR - SIERRA DE LAS PALMAS ALBARIÑO 2020", {
+    slug: slugify("SIERRA DE LAS PALMAS ALBARIÑO 2020", {
       replacement: "-",
       remove: undefined,
       lower: true,
