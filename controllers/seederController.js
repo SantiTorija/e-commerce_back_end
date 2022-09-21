@@ -7,7 +7,7 @@ const User = require("../models/User");
 const Order = require("../models/Order");
 
 module.exports = {
-  destroy: async function (req, res) {
+  reset: async function (req, res) {
     try {
       await Order.remove({});
       await Wine.remove({});

@@ -20,7 +20,7 @@ module.exports = async () => {
       "Fueron 19 crímenes que convirtieron a los convictos en colonos. Tras ser declarados culpables, los rufianes británicos,culpables de al menos uno de los 19 crímenes, fueron condenados a vivir en Australia, en lugar de la pena de muerte. Para estos bravos prisioneros que llegaban a la costa de Australia, les esperaba un nuevo mundo. Como pioneros, en una colonia penal fronteriza, forjaron un nuevo país, forjaron sus nuevas vidas, paso a paso.",
     price: 40,
     stock: 10,
-    highlighted: false,
+    highlighted: true,
     slug: slugify("19 CRIMES CABERNET SAUVIGNON", {
       replacement: "-",
       remove: undefined,
@@ -986,7 +986,7 @@ module.exports = async () => {
   wine41.save();
 
   const wine42 = await Wine.create({
-    name: "COBOS BRAMARE MARCHIORI VINEYARD CHARDONNAY 2018",
+    name: "COBOS MARCHIORI VINEYARD CHARDONNAY",
     picture:
       "https://res.cloudinary.com/dazcipdps/image/upload/v1663725504/ecommerce/chbq76cytnyjpalnaspa.png",
     country: "Argentina",
@@ -1000,7 +1000,7 @@ module.exports = async () => {
     price: 123,
     stock: 98,
     highlighted: false,
-    slug: slugify("COBOS BRAMARE MARCHIORI VINEYARD CHARDONNAY 2018", {
+    slug: slugify("COBOS MARCHIORI VINEYARD CHARDONNAY", {
       replacement: "-",
       remove: undefined,
       lower: true,
@@ -1010,7 +1010,7 @@ module.exports = async () => {
   wine42.save();
 
   const wine43 = await Wine.create({
-    name: "COMPAÑÍA URUGUAYA DE VINOS DE MAR - SIERRA DE LAS PALMAS ALBARIÑO 2020",
+    name: "COMPAÑÍA URUGUAYA DE VINOS DE MAR - SIERRA DE LAS PALMAS ALBARIÑO",
     picture:
       "https://res.cloudinary.com/dazcipdps/image/upload/v1663725796/ecommerce/icyndp9dpepxvbiitw0v.png",
     country: "Uruguay",
