@@ -10,6 +10,7 @@ wineRoutes.get("/:slug", wineController.show);
 wineRoutes.post("/", jwtcheck, wineController.store);
 wineRoutes.patch("/:id", jwtcheck, wineController.update);
 wineRoutes.delete("/:id", jwtcheck, wineController.destroy);
-wineRoutes.get("/filter/:type", wineController.showType);
+wineRoutes.get("/filter/:type", wineController.filter);
+wineRoutes.get("/search/:wineName", wineController.search);
 
 module.exports = wineRoutes;
