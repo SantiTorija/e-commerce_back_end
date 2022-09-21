@@ -9,10 +9,10 @@ module.exports = {
     if (!user) {
       return res.status(401).json({ error: "Credenciales invalidas" });
     }
-    /* const passOk = await user.isValidPassword(password);
+    const passOk = await user.isValidPassword(password);
     if (!passOk) {
-      return res.status(401).json({ error:  "Credenciales invalidales" });
-    } */
+      return res.status(401).json({ error: "Credenciales invalidales" });
+    }
     const token = jwt.sign(
       {
         id: user.id,
@@ -40,9 +40,6 @@ module.exports = {
         username: req.body.username,
         email: req.body.email,
         password: req.body.password,
-        avatar:
-          req.body.avatar ||
-          "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png",
         address: req.body.address,
         phone: req.body.phone,
         orders: [],

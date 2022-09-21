@@ -1,7 +1,7 @@
 const User = require("../models/User");
 
 module.exports = async () => {
-  const user = await User.create({
+  const user = await new User({
     firstname: "Carlos",
     lastname: "Perez",
     password: "password",
@@ -12,7 +12,7 @@ module.exports = async () => {
   });
   user.save();
 
-  const user2 = await User.create({
+  const user2 = await new User({
     firstname: "Carla",
     lastname: "Gonzalez",
     password: "password",
@@ -23,7 +23,7 @@ module.exports = async () => {
   });
   user2.save();
 
-  const user3 = await User.create({
+  const user3 = await new User({
     firstname: "Marcelo",
     lastname: "Zalayeta",
     password: "password",
