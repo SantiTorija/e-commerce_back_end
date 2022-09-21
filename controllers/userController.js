@@ -9,10 +9,10 @@ module.exports = {
     if (!user) {
       return res.status(401).json({ error: "Credenciales invalidas" });
     }
-    /* const passOk = await user.isValidPassword(password);
+    const passOk = await user.isValidPassword(password);
     if (!passOk) {
-      return res.status(401).json({ error:  "Credenciales invalidales" });
-    } */
+      return res.status(401).json({ error: "Credenciales invalidales" });
+    }
     const token = jwt.sign(
       {
         id: user.id,
