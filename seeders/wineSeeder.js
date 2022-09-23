@@ -14,8 +14,6 @@ module.exports = async () => {
     harvest: "2018",
     cellar: "Bodega Gold Coast",
     capacity: "750 ml",
-    tastingNote:
-      "De color rojo brillante a tonalidades carmesí, este vino presenta aromas intensos de vainilla, grosellas rojas, violetas y frutos negros. En la boca se presenta firme y lleno, con una dulzura sutil que da una sensación muy agradable. Los aromas de vainilla continúan en el paladar y complementan sutiles sabores de grosellas rojas, cerezas oscuras y chocolate. Los taninos suaves proporcionan un final persistente.",
     description:
       "Fueron 19 crímenes que convirtieron a los convictos en colonos. Tras ser declarados culpables, los rufianes británicos,culpables de al menos uno de los 19 crímenes, fueron condenados a vivir en Australia, en lugar de la pena de muerte. Para estos bravos prisioneros que llegaban a la costa de Australia, les esperaba un nuevo mundo. Como pioneros, en una colonia penal fronteriza, forjaron un nuevo país, forjaron sus nuevas vidas, paso a paso.",
     price: 40,
@@ -40,8 +38,6 @@ module.exports = async () => {
     harvest: "2019",
     cellar: "Bodega Joseph 54",
     capacity: "750 ml",
-    tastingNote:
-      "A pesar de estar hecho de viñas jóvenes, Amiral de Beychevelle se beneficia de las mismas técnicas de cultivo, la clasificación meticulosa y el envejecimiento tradicional del barril. Es delicado y elegante pero revela su carácter más rápidamente, ofreciendo a los entusiastas del vino la plena vivacidad de su juventud. Puede conservarse hasta quince años, según la cosecha.",
     description:
       "Color violeta negro intenso. Se destacan en nariz aromas a ciruela, especias y pimiento rojo con delicadas notas a menta. En boca es un vino muy armónico, equilibrado, de taninos redondos y largo final.",
     price: 36,
@@ -66,10 +62,8 @@ module.exports = async () => {
     harvest: "2015",
     cellar: "Bodega Penfolds",
     capacity: "750 ml",
-    tastingNote:
-      "Color negro opaco, con bordes rojo oscuro. En nariz es una erupción aromática, especias y mucha frambuesa fresca. Aparecen muy bien integrados los aromas de la barrica, respetando la fruta de la uva madura. Gran elegancia. En boca es formidable, sin vacíos, un vino continuo estructuralmente y densamente integrado. No es enorme, no es masivo, pero si vibrante y potente. Frutos negros, regaliz, higos negros aparecen en capas bien marcadas. Un tsunami de sabores.",
     description:
-      "Penfolds es actualmente uno de los exportadores más grandes de vino australiano, elaborando una amplia gama de los vinos donde el legendario Penfolds Grange es el más conocido y famoso vino australiano. Según indica Oz Clarke en su Enciclopedia del Vino, probablemente Penfolds ha hecho mucho más que cualquier otro vino por advertir al mundo la presencia del vino australiano.",
+      "Color negro opaco, con bordes rojo oscuro. En nariz es una erupción aromática, especias y mucha frambuesa fresca. Aparecen muy bien integrados los aromas de la barrica, respetando la fruta de la uva madura. Gran elegancia. En boca es formidable, sin vacíos, un vino continuo estructuralmente y densamente integrado",
     price: 49,
     stock: 10,
     highlighted: true,
@@ -92,10 +86,8 @@ module.exports = async () => {
     harvest: "2016",
     cellar: "Bodega Montes",
     capacity: "750 ml",
-    tastingNote:
-      "Montes Cherub es un vino seco, seductor y elegante, con un brillante color rosado. Es una excelente expresión de su terroir. En nariz y paladar se muestra el carácter distintivo del Syrah, con notas de frutillas, rosas y naranja.",
     description:
-      "Montes Cherub es el resultado de años de experimentación con el Syrah, con el que fuimos pioneros en el Valle de Colchagua. Es un vino seco, seductor y elegante, con un brillante color rosado. Es una excelente expresión de su terroir. En nariz y paladar se muestra el carácter distintivo del Syrah, con notas de frutillas, rosas y naranja. De gran concentración frutal, muestra su riqueza de textura en el paladar con un largo y delicioso final. Posee un fuerte soporte de acidez y una pequeña presencia de taninos que le dan una estructura muy definida.",
+      "Montes Cherub es un vino seco, seductor y elegante, con un brillante color rosado. Es una excelente expresión de su terroir. En nariz y paladar se muestra el carácter distintivo del Syrah, con notas de frutillas, rosas y naranja.",
     price: 49,
     stock: 10,
     highlighted: true,
@@ -118,10 +110,8 @@ module.exports = async () => {
     cellar: "Antigua Bodega",
     type: types[3]._id,
     capacity: "750 ml",
-    tastingNote:
-      "Color amarillo pálido con tonos verdosos. Aroma de maracuyá, manzana verde, ananá, frutos tropicales y flores frescas.",
     description:
-      "Con el pasar de los años la familia Stagnari Moise ha dedicado su vida, alma y pasión en descubrir los secretos de nuestras tierras y llevar sus vinos al mundo que son el resultado de conocimientos que se han transmitido de generación en generación. Una misteriosa tradición cuyo procedimiento se remonta siglos atrás en tiempos de mitos y leyendas. Sus secretos han pasado de generación en generación y a través de océanos y mares llegaron al nuevo mundo donde los enólogos mantienen las antiguas técnicas de vinificación con el soporte de las últimas innovaciones tecnológicas.",
+      "Color amarillo pálido con tonos verdosos. Aroma de maracuyá, manzana verde, ananá, frutos tropicales y flores frescas.",
     price: 33,
     stock: 10,
     highlighted: true,
@@ -134,32 +124,6 @@ module.exports = async () => {
   });
   wine5.save();
 
-  /* const wine6 = await Wine.create({
-    name: "FAMILIA DEICAS LICOR DE TANNAT",
-    picture: "https://vinosdelsur.com.ec/wp-content/uploads/2020/09/b-montecastrillo.png", 
-
-    country: "Uruguay",
-    region: "Canelones",
-    harvest: "2015",
-    cellar: "Familia Deicas",
-    type: types[0]._id,
-    capacity: "750 ml",
-    tastingNote:
-      "Color negro intenso. En nariz se presenta aroma de higos maduros, menta y chocolate. En boca se muestra muy amable con un notable equilibrio frutal, dulce y tánico. Ideal para acompañar postres, especialmente de chocolate, así como quesos o como licor de sobremesa. ",
-    description:
-      "Este Licor de Tannat es el primero en ser producido en Uruguay a partir de las más concentradas uvas de la variedad Tannat y de acuerdo a las técnicas de elaboración del famoso Oporto Vintage. Fue elaborado por la tercera generación de la Familia Deicas, Santiago y Fernando Deicas, cuando estos tenían solo 15 y 13 años respectivamente.  Al usar alcohol neutro, sin aromas, se preservan los aromas de la uva, tal como si se estuviese degustando una uva de Tannat madura, de la misma viña.",
-    price: 21,
-    stock: 10,
-    highlighted: true,
-    slug: slugify("FAMILIA DEICAS LICOR DE TANNAT", {
-      replacement: "-",
-      remove: undefined,
-      lower: true,
-      remove: /[.]/g,
-    }),
-  }); 
-  wine6.save();*/
-
   const wine7 = await Wine.create({
     name: "LOS VASCOS",
     picture:
@@ -170,10 +134,8 @@ module.exports = async () => {
     harvest: "2019",
     cellar: "Los Vascos",
     capacity: "750 ml",
-    tastingNote:
-      "Intenso color rojo. Nariz marcada por la presencia de aromas a frutas frescas tales como fresas, frambuesas, granadas y grosellas. Boca fresca, de buen carácter y final intenso, persistente y envolvente. Se recomienda beberlo lo antes posible para apreciar su juventud. Excelente como aperitivo o para acompañar comidas ligeramente condimentadas como gazpacho, pizza o paella. Servir frío entre 11 y 13 °C.",
     description:
-      "El establecimiento Los Vascos perteneció a la Familia Echenique desde 1850, hasta que fue adquirido por Domaines Barons de Rothschild en 1988. Actualmente es una de las mayores propiedades vitivinicolas de Chile en superficie, abarcando unas 2200 hectareas totales, las que incluyen 220 hectareas de viñedos los cuales son manejados bajo el mando directo del Chateau Lafite Rothschild de Francia. A 130 metros de altitud y 40 km del Océano Pacífico, el viñedo goza de un microclima especialmente propicio para la producción de grandes vinos.",
+      "Intenso color rojo. Nariz marcada por la presencia de aromas a frutas frescas tales como fresas, frambuesas, granadas y grosellas. Boca fresca, de buen carácter y final intenso, persistente y envolvente. Se recomienda beberlo lo antes posible para apreciar su juventud. Excelente como aperitivo o para acompañar comidas ligeramente condimentadas como gazpacho, pizza o paella.",
     price: 11,
     stock: 54,
     highlighted: false,
@@ -196,9 +158,8 @@ module.exports = async () => {
     cellar: "Antigua Bodega",
     type: types[0]._id,
     capacity: "750 ml",
-    tastingNote: "Intenso color rubí. Aromas a frutos del bosque y chocolate amargo",
     description:
-      "Con el pasar de los años la familia Stagnari Moise ha dedicado su vida, alma y pasión en descubrir los secretos de nuestras tierras y llevar sus vinos al mundo que son el resultado de conocimientos que se han transmitido de generación en generación. Una misteriosa tradición cuyo procedimiento se remonta siglos atrás en tiempos de mitos y leyendas. Sus secretos han pasado de generación en generación y a través de océanos y mares llegaron al nuevo mundo donde los enólogos mantienen las antiguas técnicas de vinificación con el soporte de las últimas innovaciones tecnológicas.",
+      "Con el pasar de los años la familia Stagnari Moise ha dedicado su vida, alma y pasión en descubrir los secretos de nuestras tierras y llevar sus vinos al mundo que son el resultado de conocimientos que se han transmitido de generación en generación. Intenso color rubí. Aromas a frutos del bosque y chocolate amargo",
     price: 19,
     stock: 24,
     highlighted: false,
@@ -221,10 +182,9 @@ module.exports = async () => {
     cellar: "Antigua Bodega",
     type: types[0]._id,
     capacity: "750 ml",
-    tastingNote:
-      "Intenso color violáceo oscuro. Muestra aromas de cereza, moras y ciruelas con notas de café, chocolate y vainilla.",
+    tastingNote: "",
     description:
-      "Con el pasar de los años la familia Stagnari Moise ha dedicado su vida, alma y pasión en descubrir los secretos de nuestras tierras y llevar sus vinos al mundo que son el resultado de conocimientos que se han transmitido de generación en generación. Una misteriosa tradición cuyo procedimiento se remonta siglos atrás en tiempos de mitos y leyendas. Sus secretos han pasado de generación en generación y a través de océanos y mares llegaron al nuevo mundo donde los enólogos mantienen las antiguas técnicas de vinificación con el soporte de las últimas innovaciones tecnológicas.",
+      "Con el pasar de los años la familia Stagnari Moise ha dedicado su vida, alma y pasión en descubrir los secretos de nuestras tierras y llevar sus vinos al mundo que son el resultado de conocimientos que se han transmitido de generación en generación. Intenso color violáceo oscuro. Muestra aromas de cereza, moras y ciruelas con notas de café, chocolate y vainilla.",
     price: 39,
     stock: 34,
     highlighted: false,
@@ -246,10 +206,8 @@ module.exports = async () => {
     harvest: "2015",
     cellar: "Alma negra",
     capacity: "750 ml",
-    tastingNote:
-      "Intenso color Rosa. Muestra aromas de cereza, moras y ciruelas con notas de café, chocolate y vainilla.",
     description:
-      "En nariz intensidad aromática, frutal y con notas a tostados. En boca es envolvente, con una acidez ligera que le brinda frescura. Su estructura es muy buena con taninos suaves y redondos y con un complejo y agradable final.",
+      "Intenso color Rosa. Muestra aromas de cereza, moras y ciruelas con notas de café, chocolate y vainilla.En nariz intensidad aromática, frutal y con notas a tostados. En boca es envolvente, con una acidez ligera que le brinda frescura. Su estructura es muy buena con taninos suaves y redondos y con un complejo y agradable final.",
     price: 41,
     stock: 20,
     highlighted: false,
@@ -271,10 +229,8 @@ module.exports = async () => {
     harvest: "2018",
     cellar: "Bianchi",
     capacity: "750 ml",
-    tastingNote:
-      "Impacta a los ojos con reflejos verde-limón. Es seductor, con fragancias florales y frutales, destacándose las notas de jazmín y durazno blanco. Fresco de carácter varietal único amalga perfectamente con notas minerales.",
     description:
-      "La línea Famiglia, reconocida internacionalmente, nos acerca una gama de vinos complejos e intensos que logran expresar de manera inigualable, las particularidades propias de los viñedos que la familia Bianchi posee en San Rafael y el Valle de Uco. ",
+      "Impacta a los ojos con reflejos verde-limón. Es seductor, con fragancias florales y frutales, destacándose las notas de jazmín y durazno blanco. Fresco de carácter varietal único amalga perfectamente con notas minerales.",
     price: 29,
     stock: 24,
     highlighted: false,
@@ -296,10 +252,8 @@ module.exports = async () => {
     harvest: "2011",
     cellar: "Familia Deicas",
     capacity: "750 ml",
-    tastingNote:
-      "Color dorado intenso capaz de evolucionar hasta ocre con la crianza. Nariz con aromas de damascos secos, lychee, rosas, miel y ananá. Boca con gran equilibrio de dulzura y acidez, con notas de fruta seca, miel y almendras.",
     description:
-      "Cosecha Tardía elaborado a partir de racimos sobremadurados, que desarrollan Botrytis Cinerea, gran responsable de los famosos Sauternes y de los mejores Vinos Nobles del mundo. Su desarrollo es muy complejo y requiere microclimas como el de Juanicó, ni muy áridos ni muy cálidos. El preciso ataque de la “botrytis” concentra los granos de uva, haciendo prevalecer el sabor aportado por el hongo sobre el sabor de la variedad.",
+      "Color dorado intenso capaz de evolucionar hasta ocre con la crianza. Nariz con aromas de damascos secos, lychee, rosas, miel y ananá. Boca con gran equilibrio de dulzura y acidez, con notas de fruta seca, miel y almendras.",
     price: 15,
     stock: 44,
     highlighted: false,
@@ -321,9 +275,8 @@ module.exports = async () => {
     harvest: "2018",
     cellar: "Animal Organic",
     capacity: "750 ml",
-    tastingNote: "Amarillo pálido con reflejos verdes. Cítrico con notas a pan tostado.",
     description:
-      "Desde hace 4 generaciones, la familia Catena ha cultivado vinos a los pies de la Cordillera de los Andes en Mendoza, Argentina. En su búsqueda por hacer vinos que destaquen entre los mejores del mundo, Nicolás Catena identificó los mejores lotes y  filas en los viñedos de la familia Catena.",
+      "Amarillo pálido con reflejos verdes. Cítrico con notas a pan tostado.Desde hace 4 generaciones, la familia Catena ha cultivado vinos a los pies de la Cordillera de los Andes en Mendoza, Argentina. En su búsqueda por hacer vinos que destaquen entre los mejores del mundo, Nicolás Catena identificó los mejores lotes y  filas en los viñedos de la familia Catena.",
     price: 42,
     stock: 14,
     highlighted: false,
@@ -345,9 +298,8 @@ module.exports = async () => {
     harvest: "2008",
     cellar: "Catena Zapata",
     capacity: "750 ml",
-    tastingNote: "Aroma floral distintivo con una mineralidad terrosa en nariz y paladar. ",
     description:
-      "White Bones Chardonnay viene de una selecta hilera dentro del bloque 1 en el viñedo de Adrianna. El nombre refiere a los suelos debajo de estas hileras que está en capas con depósitos calcáreos y piedra caliza, así como huesos de animales fosilizados de un río qe solía pasar por la región.",
+      "Aroma floral distintivo con una mineralidad terrosa en nariz y paladar.White Bones Chardonnay viene de una selecta hilera dentro del bloque 1 en el viñedo de Adrianna. El nombre refiere a los suelos debajo de estas hileras que está en capas con depósitos calcáreos y piedra caliza, así como huesos de animales fosilizados de un río qe solía pasar por la región.",
     price: 151,
     stock: 10,
     highlighted: false,
@@ -369,10 +321,8 @@ module.exports = async () => {
     harvest: "2015",
     cellar: "Antigua Bodega",
     capacity: "1500 ml",
-    tastingNote:
-      "Intenso color rosa con notas amarillentas. Muestra aromas de cereza, moras y ciruelas, ideal para acompañar postres o aperitivos.",
     description:
-      "Rose Magnum es el resultado de años de experimentación con el Syrah, con el que fuimos pioneros en el Valle de Colchagua. Es un vino seco, seductor y elegante, con un brillante color rosado. Es una excelente expresión de su terroir. En nariz y paladar se muestra el carácter distintivo del Syrah, con notas de frutillas, rosas y naranja. De gran concentración frutal, muestra su riqueza de textura en el paladar con un largo y delicioso final. Posee un fuerte soporte de acidez y una pequeña presencia de taninos que le dan una estructura muy definida.",
+      "Intenso color rosa con notas amarillentas. Muestra aromas de cereza, moras y ciruelas, ideal para acompañar postres o aperitivos. Rose Magnum es el resultado de años de experimentación con el Syrah, con el que fuimos pioneros en el Valle de Colchagua. Es un vino seco, seductor y elegante, con un brillante color rosado. Es una excelente expresión de su terroir.",
     price: 20,
     stock: 40,
     highlighted: false,
@@ -420,7 +370,7 @@ module.exports = async () => {
     cellar: "STAGS LEAP",
     capacity: "750 ml",
     description:
-      "Nuestro Chardonnay de Napa Valley se prensa suavemente con racimo entero para preservar los aromas frescos y florales que se producen naturalmente en la fruta. El 25% del vino se fermenta en acero inoxidable y permanece en el tanque hasta que se ensambla la mezcla final. Otro 25% es fermentado y envejecido en barricas nuevas de roble francés y el 50% restante en roble francés de segundo uso. Este tratamiento de barril específico ayuda a preservar la pureza esencial de la fruta al tiempo que agrega notas sutiles de la complejidad del roble. La añada 2017, como de costumbre, no experimentó fermentación maloláctica, lo que ayuda a mantener aún más la acidez natural y la frescura aromática de la fruta. El vino fue embotellado después de solo seis meses de maduración con un battonage semanal, poniendo las lías de levadura en suspensión para liberar notas aromáticas sutiles, aumentar la sensación en la boca y prevenir cualidades reductoras.",
+      "Nuestro Chardonnay de Napa Valley se prensa suavemente con racimo entero para preservar los aromas frescos y florales que se producen naturalmente en la fruta. El 25% del vino se fermenta en acero inoxidable y permanece en el tanque hasta que se ensambla la mezcla final. Otro 25% es fermentado y envejecido en barricas nuevas de roble francés y el 50% restante en roble francés de segundo uso.",
     price: 89,
     stock: 15,
     highlighted: true,
@@ -468,7 +418,7 @@ module.exports = async () => {
     cellar: "Viña Eden",
     capacity: "750 ml",
     description:
-      "Sobre las pedregosas sierras de Pueblo Edén se hallan nuestros viñedos, el carácter mineral de sus suelos y la influencia oceánica, generan las condiciones ideales para la creación y producción sustentable de vinos de estilo único. A minutos de Punta del Este, sobre la panorámica Ruta 12 que nace en el Atlántico y se abre paso entre las sierras se encuentra Viña Edén, un lugar excepcional para vivir una experiencia única. Fuertes pendientes, suelos pedregosos y la influencia del Océano Atlántico caracterizan nuestro terroir. El carácter mineral de los suelos y la influencia oceánica, producen condiciones ideales para la creación de vinos de estilo único.Aromas delicados frutados y burbujas muy pequeñas, en boca se presenta fresco y elegante.",
+      "Sobre las pedregosas sierras de Pueblo Edén se hallan nuestros viñedos, el carácter mineral de sus suelos y la influencia oceánica, generan las condiciones ideales para la creación y producción sustentable de vinos de estilo único.",
     price: 39,
     stock: 31,
     highlighted: true,
@@ -660,7 +610,7 @@ module.exports = async () => {
     cellar: "Séptima",
     capacity: "750 ml",
     description:
-      "Espumoso elaborado con uvas Chardonnay y Pinot Noir provenientes de diferentes viñedos ubicados en la región del valle de Uco, donde se combinan suelos franco-arcilloso, y pedregosos con incidencia calcárea.  Las condiciones de suelo dadas en estos valles de altura ubicados entre 1100 y 1400 m. s. n. m al pie de la Cordillera de los Andes. Todo esto permite que los vinos obtenidos de los diferentes viñedos tengan características diferenciales y particulares que garantizan mantener la personalidad de Maria Codorníu cosecha tras cosecha. ",
+      "Espumoso elaborado con uvas Chardonnay y Pinot Noir provenientes de diferentes viñedos ubicados en la región del valle de Uco, donde se combinan suelos franco-arcilloso, y pedregosos con incidencia calcárea.  Las condiciones de suelo dadas en estos valles de altura ubicados entre 1100 y 1400 m. s. n. m al pie de la Cordillera de los Andes.",
     price: 54,
     stock: 43,
     highlighted: true,
@@ -756,7 +706,7 @@ module.exports = async () => {
     cellar: "Cobos",
     capacity: "750 ml",
     description:
-      "El color limpio y vibrante de este chardonnay nos prepara para un vino muy elegante, de gran frescura y vivacidad; amarillo pálido con tonos verdes y destellos dorados. En nariz encontramos un delicado bouquet floral, con notas sutiles a frutas tropicales, manzana verde y un acento herbal. Se destaca su mineralidad, al tiempo que nos deleita con aromas a pan tostado, manteca de cacao, chocolate blanco y vainilla. En boca es redondo, con excelente concentración; tiene una marcada acidez y buen volumen, es untuoso y persistente. Tiene un final pronunciado, largo, con un placentero recuerdo a duraznos secos y mucha fruta.",
+      "El color limpio y vibrante de este chardonnay nos prepara para un vino muy elegante, de gran frescura y vivacidad; amarillo pálido con tonos verdes y destellos dorados. En nariz encontramos un delicado bouquet floral, con notas sutiles a frutas tropicales, manzana verde y un acento herbal. Se destaca su mineralidad, al tiempo que nos deleita con aromas a pan tostado, manteca de cacao, chocolate blanco y vainilla.",
     price: 106,
     stock: 34,
     highlighted: true,
@@ -852,7 +802,7 @@ module.exports = async () => {
     cellar: "Marichal",
     capacity: "750 ml",
     description:
-      "Brillante, límpido y transparente con un color salmón con reflejos cobrizos que recuerdan a la piel de cebolla. Presenta notas características del Chardonnay como ser el ananá y el pomelo rosado, con notas de durazno fresco, en combinación con las notas características de los frutos rojos proporcionados por el Pinot Noir. Agradable entrada en boca. Se presenta suave, con un sabor diferente y muy sorprendente, untuoso con una acidez moderada marcada por la fruta. Presenta un final medio. Maridaje: Ideal para acompañar con aperitivos, paella, salmón y arroces con verduras. Marida muy bien con cheesecake de frutos rojos.",
+      "Brillante, límpido y transparente con un color salmón con reflejos cobrizos que recuerdan a la piel de cebolla. Presenta notas características del Chardonnay como ser el ananá y el pomelo rosado, con notas de durazno fresco, en combinación con las notas características de los frutos rojos proporcionados por el Pinot Noir.",
     price: 12,
     stock: 99,
     highlighted: false,
@@ -900,7 +850,7 @@ module.exports = async () => {
     cellar: "Vicentin Family Wines",
     capacity: "750 ml",
     description:
-      "Somos una familia con visión de progreso y trabajo. Hace más de un siglo que construímos futuro, desde Argentina, nuestra tierra. Comenzamos la aventura en el año 2009 con el viaje desde el litoral, desde las plantaciones de algodón y girasol hasta el desierto salvaje, frente a la Cordillera de los Andes, donde buscamos los viñedos de los productores más antiguos de las zonas vitivinícolas de Mendoza para contar con la mejor prima materia, la de los mejores taninos y los mejores frutos.",
+      "Somos una familia con visión de progreso y trabajo. Hace más de un siglo que construímos futuro, desde Argentina, nuestra tierra. Comenzamos la aventura en el año 2009 con el viaje desde el litoral, desde las plantaciones de algodón y girasol hasta el desierto salvaje, frente a la Cordillera de los Andes.",
     price: 11,
     stock: 56,
     highlighted: false,
@@ -996,7 +946,7 @@ module.exports = async () => {
     cellar: "Cobos",
     capacity: "750 ml",
     description:
-      "El color limpio y vibrante de este chardonnay nos prepara para un vino muy elegante, de gran frescura y vivacidad; amarillo pálido con tonos verdes y destellos dorados. En nariz encontramos un delicado bouquet floral, con notas sutiles a frutas tropicales, manzana verde y un acento herbal. Se destaca su mineralidad, al tiempo que nos deleita con aromas a pan tostado, manteca de cacao, chocolate blanco y vainilla. En boca es redondo, con excelente concentración; tiene una marcada acidez y buen volumen, es untuoso y persistente. Tiene un final pronunciado, largo, con un placentero recuerdo a duraznos secos y mucha fruta.",
+      "El color limpio y vibrante de este chardonnay nos prepara para un vino muy elegante, de gran frescura y vivacidad; amarillo pálido con tonos verdes y destellos dorados. En nariz encontramos un delicado bouquet floral, con notas sutiles a frutas tropicales, manzana verde y un acento herbal. Se destaca su mineralidad, al tiempo que nos deleita con aromas a pan tostado, manteca de cacao, chocolate blanco y vainilla.",
     price: 123,
     stock: 98,
     highlighted: false,
@@ -1044,7 +994,7 @@ module.exports = async () => {
     cellar: "Kaiken",
     capacity: "750 ml",
     description:
-      "Presenta un color rojo cereza, límpido y de gran intensidad. Con aromas frutales, de frutillas maceradas y elegantes notas de violetas que aumentan su complejidad. En boca es un vino con cuerpo, en perfecta armonía con su delicada acidez. Se muestra fresco, delicado y seductor, un perfecto compañero para diversos tipos de comidas. Este es un vino que combina de manera única el frescor de los mejores rosados con el cuerpo y suavidad única de nuestros más queridos malbecs.",
+      "Presenta un color rojo cereza, límpido y de gran intensidad. Con aromas frutales, de frutillas maceradas y elegantes notas de violetas que aumentan su complejidad. En boca es un vino con cuerpo, en perfecta armonía con su delicada acidez. Se muestra fresco, delicado y seductor, un perfecto compañero para diversos tipos de comidas.",
     price: 13,
     stock: 56,
     highlighted: false,
@@ -1140,7 +1090,7 @@ module.exports = async () => {
     cellar: "Vicentin Family Wines",
     capacity: "750 ml",
     description:
-      "Somos una familia con visión de progreso y trabajo. Hace más de un siglo que construímos futuro, desde Argentina, nuestra tierra. Comenzamos la aventura en el año 2009 con el viaje desde el litoral, desde las plantaciones de algodón y girasol hasta el desierto salvaje, frente a la Cordillera de los Andes, donde buscamos los viñedos de los productores más antiguos de las zonas vitivinícolas de Mendoza para contar con la mejor prima materia, la de los mejores taninos y los mejores frutos.",
+      "Somos una familia con visión de progreso y trabajo. Hace más de un siglo que construímos futuro, desde Argentina, nuestra tierra. Comenzamos la aventura en el año 2009 con el viaje desde el litoral, desde las plantaciones de algodón y girasol hasta el desierto salvaje, frente a la Cordillera de los Andes.",
     price: 16,
     stock: 53,
     highlighted: false,
